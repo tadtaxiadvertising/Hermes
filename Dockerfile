@@ -38,7 +38,7 @@ RUN if [ ! -f "/opt/hermes-agent-context/pyproject.toml" ]; then \
     fi
 
 # ---------- Stage 2: uv + gosu ----------
-FROM ghcr.io/astral-sh/uv:0.11.6-python3.13-bookworm-slim AS uv_source
+FROM ghcr.io/astral-sh/uv:0.11.6-python3.13-bookworm AS uv_source
 
 FROM debian:13.4-slim AS gosu_source
 ARG GOSU_VERSION=1.17

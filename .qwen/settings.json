@@ -21,7 +21,8 @@
       "Bash(npm *)",
       "Bash(type *)",
       "Bash(del *)",
-      "Agent(Explore)"
+      "Agent(Explore)",
+      "Bash(docker manifest *)"
     ]
   },
   "$version": 4

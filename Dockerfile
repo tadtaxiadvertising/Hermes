@@ -1,22 +1,19 @@
 # =============================================================================
-# Dockerfile — Hermes Gateway for Easypanel (root repo overlay approach)
+# Dockerfile — Hermes Gateway for Easypanel (submodule-aware build)
 # =============================================================================
-# This Dockerfile lives in the config-overlay repo (tadtaxiadvertising/Hermes.git).
-# During build it:
-#   1. Clones the hermes-agent source from tadtaxiadvertising/hermes-agent.git
-#   2. Copies the slim Dockerfile.easypanel from hermes-agent/docker/
-#   3. Applies the config overlay from this repo (SOUL.md, config.yaml)
-#   4. Builds the slim gateway image
+# Easypanel does NOT run git submodule init during clone.
+# This Dockerfile handles it: if hermes-agent/ is empty (Easypanel clone),
+# it clones from GitHub during build. If it has files (local build with
+# submodule init), it copies them directly.
 #
-# Easypanel just needs this repo — source code is fetched during build.
-#
-# To pin a specific hermes-agent version, set HERMES_AGENT_REF in Easypanel env:
-#   HERMES_AGENT_REF=v0.18.2   (tag)
-#   HERMES_AGENT_REF=main      (branch, default)
-#   HERMES_AGENT_REF=abc123    (commit SHA)
+# Image: ~400-500MB (slim, no Playwright/Node.js/s6-overlay)
+# RAM: 512MB hard limit
+# Port: 8642 (OpenAI-compatible API + /health endpoint)
 # =============================================================================
 
-# ---------- Stage 1: Clone hermes-agent source ----------
+# ---------- Stage 1: Source acquisition ----------
+# If hermes-agent/ is empty (Easypanel clone without submodule init),
+# clone it from GitHub. Otherwise, just copy from build context.
 FROM debian:13.4-slim AS source
 
 ARG HERMES_AGENT_REPO=https://github.com/tadtaxiadvertising/hermes-agent.git
@@ -26,10 +23,21 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends git && \
     rm -rf /var/lib/apt/lists/*
 
-RUN git clone --depth 1 --branch "${HERMES_AGENT_REF}" "${HERMES_AGENT_REPO}" /opt/hermes-agent && \
-    rm -rf /opt/hermes-agent/.git
+# Try copying from build context first. If the dir is empty (Easypanel),
+# .dockerignore still allows the empty dir marker, and we fall back to clone.
+COPY hermes-agent/ /opt/hermes-agent-context/
 
-# ---------- Stage 2: Build slim gateway ----------
+# Check if context has actual source files. If not, clone from GitHub.
+RUN if [ ! -f "/opt/hermes-agent-context/pyproject.toml" ]; then \
+    echo "[build] hermes-agent/ empty — cloning from GitHub" && \
+    git clone --depth 1 --branch "${HERMES_AGENT_REF}" "${HERMES_AGENT_REPO}" /opt/hermes-agent && \
+    rm -rf /opt/hermes-agent/.git; \
+    else \
+    echo "[build] hermes-agent/ from build context (submodule)" && \
+    cp -a /opt/hermes-agent-context/. /opt/hermes-agent/; \
+    fi
+
+# ---------- Stage 2: uv + gosu ----------
 FROM ghcr.io/astral-sh/uv:0.11.6-python3.13-bookworm-slim AS uv_source
 
 FROM debian:13.4-slim AS gosu_source
@@ -39,12 +47,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     chmod +x /usr/local/bin/gosu && \
     rm -rf /var/lib/apt/lists/*
 
-FROM python:3.13-slim-bookworm AS runtime
+# ---------- Stage 3: Runtime ----------
+FROM python:3.13-slim-bookworm
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 
-# Runtime system deps
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     ca-certificates curl git ffmpeg tini procps libolm-dev && \
@@ -66,13 +74,10 @@ RUN uv sync --frozen --no-install-project \
 # ---------- Source code ----------
 COPY --from=source /opt/hermes-agent/ .
 
-# ---------- Config overlay from THIS repo ----------
-# These files override the defaults shipped in hermes-agent/ and
-# are the reason this repo exists — your custom persona, config, etc.
+# ---------- Config overlay from root repo ----------
 COPY SOUL.md     /opt/data-seed/SOUL.md
 COPY config.yaml /opt/data-seed/config.yaml
 
-# Install hermes-agent + stamp
 RUN uv pip install --no-cache-dir --no-deps -e "." && \
     printf 'docker-easypanel\n' > /opt/hermes/.install_method
 
@@ -80,9 +85,7 @@ RUN uv pip install --no-cache-dir --no-deps -e "." && \
 COPY --from=source /opt/hermes-agent/docker/easypanel-entrypoint.sh /opt/hermes/docker/easypanel-entrypoint.sh
 RUN chmod +x /opt/hermes/docker/easypanel-entrypoint.sh
 
-# Patch the entrypoint to also copy overlay files on first boot
-# (SOUL.md and config.yaml from /opt/data-seed → /opt/data)
-RUN printf '\n# --- Overlay seed (from config repo) ---\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
+RUN printf '\n# --- Overlay seed ---\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
     printf 'if [ ! -f "$HERMES_HOME/SOUL.md" ] && [ -f "/opt/data-seed/SOUL.md" ]; then\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
     printf '    cp /opt/data-seed/SOUL.md "$HERMES_HOME/SOUL.md"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
     printf '    chown hermes:hermes "$HERMES_HOME/SOUL.md"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
@@ -93,7 +96,7 @@ RUN printf '\n# --- Overlay seed (from config repo) ---\n' >> /opt/hermes/docker
     printf '    chmod 640 "$HERMES_HOME/config.yaml"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
     printf 'fi\n' >> /opt/hermes/docker/easypanel-entrypoint.sh
 
-# ---------- Runtime config ----------
+# ---------- Runtime ----------
 ENV HERMES_HOME=/opt/data
 ENV HERMES_WRITE_SAFE_ROOT=/opt/data
 ENV HERMES_DISABLE_LAZY_INSTALLS=1

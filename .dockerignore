@@ -1,9 +1,9 @@
-# Secrets (NEVER send to Docker build context)
+# ── Secrets ──
 .env
 auth.json
 auth.lock
 
-# Runtime state (ephemeral, lives in the volume)
+# ── Root runtime state ──
 logs/
 cache/
 sessions/
@@ -13,8 +13,9 @@ state.db-wal
 projects.db
 processes.json
 context_length_cache.yaml
+desktop-build-stamp.json
 
-# Caches (model metadata)
+# ── Root caches ──
 models_dev_cache.json
 ollama_cloud_models_cache.json
 provider_models_cache.json
@@ -22,15 +23,12 @@ provider_models_cache.json
 .update_check
 .update_exit_code
 
-# Binaries (not needed in build)
+# ── Root binaries ──
 bin/
 hermes-setup.exe
-desktop-build-stamp.json
+install.ps1
 
-# LSP server (not needed in build)
-lsp/
-
-# Runtime data dirs (volume-mounted at /opt/data)
+# ── Root dirs not needed in image ──
 audio_cache/
 image_cache/
 hooks/
@@ -40,19 +38,66 @@ shared/
 state-snapshots/
 bootstrap-cache/
 cron/
+lsp/
+skills/
 
-# Memory runtime state
+# ── Qwen metadata ──
+.qwen/
+
+# ── Root informational files ──
+README.md
+
+# ── Memory runtime state ──
 memories/MEMORY.md.lock
 memories/USER.md.lock
 
-# Hermes-agent nested git repo (source is cloned during build)
-hermes-agent/
+# ── NOTE: hermes-agent/ is NOT excluded here ──
+# When building locally (with submodule init), the source files are available.
+# When Easypanel clones (without submodule init), the dir is empty and the
+# Dockerfile falls back to git clone from GitHub in Stage 1.
+# Only exclude the nested .git and heavy subdirs:
 
-# Qwen metadata
-.qwen/
+# ── hermes-agent: git metadata ──
+hermes-agent/.git/
+hermes-agent/.gitmodules
 
-# Install script (not needed in Docker)
-install.ps1
+# ── hermes-agent: heavy dirs excluded from Docker context ──
+hermes-agent/node_modules/
+hermes-agent/.venv/
+hermes-agent/venv/
+hermes-agent/__pycache__/
+hermes-agent/.plans/
+hermes-agent/.notebooklm-cli-venv/
+hermes-agent/.notebooklm-playwright/
 
-# README is informational only
-README.md
+# ── hermes-agent: not needed for gateway build ──
+hermes-agent/tests/
+hermes-agent/tests-js/
+hermes-agent/website/
+hermes-agent/docs/
+hermes-agent/assets/
+hermes-agent/infographic/
+hermes-agent/nix/
+hermes-agent/flake.nix
+hermes-agent/flake.lock
+hermes-agent/packaging/
+hermes-agent/contributors/
+hermes-agent/datagen-config-examples/
+hermes-agent/.github/
+
+# ── hermes-agent: desktop app (not needed for gateway) ──
+hermes-agent/apps/desktop/
+hermes-agent/apps/desktop/**
+
+# ── hermes-agent: IDE / CI / misc ──
+hermes-agent/.env
+hermes-agent/.envrc
+hermes-agent/.gitattributes
+hermes-agent/.hadolint.yaml
+hermes-agent/.mailmap
+hermes-agent/.prettierignore
+hermes-agent/.prettierrc
+hermes-agent/eslint.config.shared.mjs
+hermes-agent/.hermes-bootstrap-complete
+hermes-agent/.pip-cache/
+hermes-agent/.uv-cache/

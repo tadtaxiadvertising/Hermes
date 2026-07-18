@@ -1,6 +1,3 @@
-# ── Nested git repo (has its own .git) ──
-hermes-agent/
-
 # ── Secrets (NEVER commit API keys, tokens, passwords) ──
 .env
 auth.json
@@ -52,14 +49,14 @@ pets/
 # ── Shared auth runtime ──
 shared/
 
-# ── State snapshots (backup artifacts) ──
+# ── State snapshots ──
 state-snapshots/
 
 # ── Process tracking ──
 processes.json
 
-# ── Skills (runtime-deployed, source lives in hermes-agent/) ──
+# ── Skills (runtime-deployed) ──
 skills/
 
-# ── Bootstrap cache (installer script is tracked separately) ──
+# ── Bootstrap cache ──
 bootstrap-cache/

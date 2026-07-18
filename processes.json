@@ -16,7 +16,7 @@
     "watcher_thread_id": "",
     "watcher_message_id": "",
     "watcher_interval": 0,
-    "notify_on_complete": false,
+    "notify_on_complete": true,
     "watch_patterns": []
   }
 ]

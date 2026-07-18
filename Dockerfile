@@ -9,6 +9,7 @@
 # Image: ~400-500MB (slim, no Playwright/Node.js/s6-overlay)
 # RAM: 512MB hard limit
 # Port: 8642 (OpenAI-compatible API + /health endpoint)
+# Seed: SOUL.md, config.yaml, MEMORY.md, USER.md from overlay
 # =============================================================================
 
 # ---------- Stage 1: Source acquisition ----------
@@ -75,8 +76,14 @@ RUN uv sync --frozen --no-install-project \
 COPY --from=source /opt/hermes-agent/ .
 
 # ---------- Config overlay from root repo ----------
-COPY SOUL.md     /opt/data-seed/SOUL.md
-COPY config.yaml /opt/data-seed/config.yaml
+# SOUL.md and config.yaml — seed at deploy time (entrypoint.sh copies to /opt/data)
+COPY seed/SOUL.md     /opt/data-seed/SOUL.md
+COPY config.yaml      /opt/data-seed/config.yaml
+
+# ---------- Memory seed from root repo ----------
+# MEMORY.md and USER.md — seed at deploy time (entrypoint.sh copies to /opt/data/memories/)
+COPY seed/memories/MEMORY.md /opt/memories-seed/MEMORY.md
+COPY seed/memories/USER.md   /opt/memories-seed/USER.md
 
 RUN uv pip install --no-cache-dir --no-deps -e "." && \
     printf 'docker-easypanel\n' > /opt/hermes/.install_method
@@ -85,17 +92,6 @@ RUN uv pip install --no-cache-dir --no-deps -e "." && \
 COPY --from=source /opt/hermes-agent/docker/easypanel-entrypoint.sh /opt/hermes/docker/easypanel-entrypoint.sh
 RUN chmod +x /opt/hermes/docker/easypanel-entrypoint.sh
 
-RUN printf '\n# --- Overlay seed ---\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf 'if [ ! -f "$HERMES_HOME/SOUL.md" ] && [ -f "/opt/data-seed/SOUL.md" ]; then\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf '    cp /opt/data-seed/SOUL.md "$HERMES_HOME/SOUL.md"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf '    chown hermes:hermes "$HERMES_HOME/SOUL.md"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf 'fi\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf 'if [ ! -f "$HERMES_HOME/config.yaml" ] && [ -f "/opt/data-seed/config.yaml" ]; then\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf '    cp /opt/data-seed/config.yaml "$HERMES_HOME/config.yaml"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf '    chown hermes:hermes "$HERMES_HOME/config.yaml"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf '    chmod 640 "$HERMES_HOME/config.yaml"\n' >> /opt/hermes/docker/easypanel-entrypoint.sh && \
-    printf 'fi\n' >> /opt/hermes/docker/easypanel-entrypoint.sh
-
 # ---------- Runtime ----------
 ENV HERMES_HOME=/opt/data
 ENV HERMES_WRITE_SAFE_ROOT=/opt/data
@@ -103,7 +99,7 @@ ENV HERMES_DISABLE_LAZY_INSTALLS=1
 ENV HERMES_LAZY_INSTALL_TARGET=/opt/data/lazy-packages
 ENV PATH="/opt/hermes/.venv/bin:${PATH}"
 
-RUN mkdir -p /opt/data /opt/data-seed && chown hermes:hermes /opt/data
+RUN mkdir -p /opt/data /opt/data-seed /opt/memories-seed && chown hermes:hermes /opt/data
 
 VOLUME [ "/opt/data" ]
 EXPOSE 8642

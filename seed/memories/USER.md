@@ -1,0 +1,5 @@
+Prefiere diseños minimalistas (inspiración Linear/Vercel); rechaza layouts sobrecargados, grid patterns excesivos o feature highlights innecesarios en login. Antes de modificar componentes UI compartidos como PortalAuth debe presentar plan de impacto y pedir aprobación expresa. Exige re-verificación fresca (tsc --noEmit, npm run build) antes de considerar un cambio verificado; no admite reusar evidencia anterior.
+§
+TAD DOOH Platform — TAD Taxi Advertising S.R.L. / tadtaxiadvertising (private GitHub org). Operator-side product (taxi-top DOOH screens paired with driver mobile gateways). EasyPanel-hosted microservices. User is "Arquitecto de Producto" — they approve deviations from core rules. Language: Spanish preferred for casual communication, English for code/technical.
+§
+Works with Hermes agent both locally (Windows) and on Easypanel VPS (Linux container). When on VPS, use terminal for code tasks (clone, edit, build, deploy). GitHub PAT stored in GITHUB_PAT env var for private repo access.

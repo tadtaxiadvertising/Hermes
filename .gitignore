@@ -1,0 +1,61 @@
+# ── Nested git repo (has its own .git) ──
+hermes-agent/
+
+# ── Runtime state & ephemera ──
+logs/
+cache/
+sessions/
+cron/ticker_heartbeat
+cron/ticker_last_success
+cron/.jobs.lock
+cron/.tick.lock
+cron/executions.db
+cron/output/
+state.db
+state.db-shm
+state.db-wal
+projects.db
+verification_evidence.db
+auth.lock
+context_length_cache.yaml
+
+# ── Caches (model metadata, provider lists) ──
+models_dev_cache.json
+ollama_cloud_models_cache.json
+provider_models_cache.json
+.update_check
+.update_exit_code
+.skills_prompt_snapshot.json
+
+# ── LSP server binaries & deps ──
+lsp/
+
+# ── Python/JS runtime binaries ──
+bin/
+hermes-setup.exe
+
+# ── Memory system (runtime state, not config) ──
+memories/MEMORY.md.lock
+memories/USER.md.lock
+
+# ── Empty/unused runtime dirs ──
+audio_cache/
+image_cache/
+hooks/
+pairing/
+pets/
+
+# ── Shared auth runtime ──
+shared/
+
+# ── State snapshots (backup artifacts) ──
+state-snapshots/
+
+# ── Process tracking ──
+processes.json
+
+# ── Skills (runtime-deployed, source lives in hermes-agent/) ──
+skills/
+
+# ── Bootstrap cache (installer script is tracked separately) ──
+bootstrap-cache/

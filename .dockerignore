@@ -1,0 +1,58 @@
+# Secrets (NEVER send to Docker build context)
+.env
+auth.json
+auth.lock
+
+# Runtime state (ephemeral, lives in the volume)
+logs/
+cache/
+sessions/
+state.db
+state.db-shm
+state.db-wal
+projects.db
+processes.json
+context_length_cache.yaml
+
+# Caches (model metadata)
+models_dev_cache.json
+ollama_cloud_models_cache.json
+provider_models_cache.json
+.skills_prompt_snapshot.json
+.update_check
+.update_exit_code
+
+# Binaries (not needed in build)
+bin/
+hermes-setup.exe
+desktop-build-stamp.json
+
+# LSP server (not needed in build)
+lsp/
+
+# Runtime data dirs (volume-mounted at /opt/data)
+audio_cache/
+image_cache/
+hooks/
+pairing/
+pets/
+shared/
+state-snapshots/
+bootstrap-cache/
+cron/
+
+# Memory runtime state
+memories/MEMORY.md.lock
+memories/USER.md.lock
+
+# Hermes-agent nested git repo (source is cloned during build)
+hermes-agent/
+
+# Qwen metadata
+.qwen/
+
+# Install script (not needed in Docker)
+install.ps1
+
+# README is informational only
+README.md

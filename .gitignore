@@ -1,6 +1,10 @@
 # ── Nested git repo (has its own .git) ──
 hermes-agent/
 
+# ── Secrets (NEVER commit API keys, tokens, passwords) ──
+.env
+auth.json
+
 # ── Runtime state & ephemera ──
 logs/
 cache/

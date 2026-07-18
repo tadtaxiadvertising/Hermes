@@ -4,7 +4,8 @@ TAD tool quirks: tsc --noEmit (no lint/build/test, ignoreBuildErrors), search_fi
 §
 OneDrive-sync causa hangs en next build (apps/admin). Para verificar: usar solo tsc --noEmit, o mover a temp fuera de OneDrive, o pausar sync.
 §
-Rules v12: 402 kill-switch, 15 ads/tablet, 48h offline-first, 5min telemetry debounce, earnings=min(ActiveAds,15)*RD$500+confirmed*RD$500. Driver auth: local bcrypt JWT HS256 7-day, no refresh endpoint. Builds must run outside OneDrive.
+Builds must run outside OneDrive.
+Remotion typesheet pitfalls session: duplicate type-name exports (TS2300), union-branch intersection causing unreachable type branches, and motion-config interpolation referenced from template-string scope (TS2304). Last typecheck state was incomplete; stale tool results should not be treated as current file state. Next typecheck should be treated as the source of truth.
 §
 Android DOOH driver app (apps/driver-android): gradle needs JAVA_HOME/ANDROID_HOME. Supabase 3.1.0 realtime-kt ships Kotlin metadata 2.3.x despite 3.1 branch — breaks Hilt 2.56 and Kotlin 2.1.x; workaround is hard-remove realtime usage. Hilt: @HiltAndroidApp types are members-injected only; cast context.applicationContext in @Provides providers instead of requesting Application as a parameter.
 §

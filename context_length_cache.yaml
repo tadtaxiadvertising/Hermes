@@ -1,0 +1,9 @@
+context_lengths:
+  minimaxai/minimax-m3@https://integrate.api.nvidia.com/v1: 1048576
+  stepfun-ai/step-3.7-flash@https://integrate.api.nvidia.com/v1: 131072
+  minimaxai/minimax-m2.7@https://integrate.api.nvidia.com/v1: 1048576
+  deepseek-ai/deepseek-v4-flash@https://integrate.api.nvidia.com/v1: 1048576
+  qwen/qwen3.5-122b-a10b@https://integrate.api.nvidia.com/v1: 262144
+  z-ai/glm-5.2@https://integrate.api.nvidia.com/v1: 1048576
+  deepseek-ai/deepseek-v4-pro@https://integrate.api.nvidia.com/v1: 1048576
+  nvidia/nemotron-3-ultra-550b-a55b@https://integrate.api.nvidia.com/v1: 1048576

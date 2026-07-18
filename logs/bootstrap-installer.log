@@ -1,0 +1,897 @@
+2026-06-03T20:28:29.346297Z  INFO hermes_bootstrap_lib: Hermes Setup starting mode=Install
+2026-07-09T22:23:10.068834Z  INFO hermes_bootstrap_lib: Hermes Setup starting mode=Install
+2026-07-09T22:23:15.576899Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap starting pin=Pin { commit: None, branch: Some("main") } kind=Ps1 include_desktop=true
+2026-07-09T22:23:15.578068Z  INFO bootstrap.log: [bootstrap] downloading install.ps1 for main from GitHub
+2026-07-09T22:23:27.682920Z ERROR hermes_bootstrap_lib::bootstrap: bootstrap FAILED stage=None error=resolve install script failed: GET https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1: error sending request for url (https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1): client error (Connect): dns error: No such host is known. (os error 11001)
+2026-07-09T22:24:02.377878Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap starting pin=Pin { commit: None, branch: Some("main") } kind=Ps1 include_desktop=true
+2026-07-09T22:24:02.378478Z  INFO bootstrap.log: [bootstrap] downloading install.ps1 for main from GitHub
+2026-07-09T22:24:14.460230Z ERROR hermes_bootstrap_lib::bootstrap: bootstrap FAILED stage=None error=resolve install script failed: GET https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1: error sending request for url (https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1): client error (Connect): dns error: No such host is known. (os error 11001)
+2026-07-09T22:24:36.785266Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap starting pin=Pin { commit: None, branch: Some("main") } kind=Ps1 include_desktop=true
+2026-07-09T22:24:36.785825Z  INFO bootstrap.log: [bootstrap] downloading install.ps1 for main from GitHub
+2026-07-09T22:24:48.833789Z ERROR hermes_bootstrap_lib::bootstrap: bootstrap FAILED stage=None error=resolve install script failed: GET https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1: error sending request for url (https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1): client error (Connect): dns error: No such host is known. (os error 11001)
+2026-07-09T22:25:39.412390Z  INFO hermes_bootstrap_lib: Hermes Setup starting mode=Install
+2026-07-09T22:25:43.969131Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap starting pin=Pin { commit: None, branch: Some("main") } kind=Ps1 include_desktop=true
+2026-07-09T22:25:43.969582Z  INFO bootstrap.log: [bootstrap] downloading install.ps1 for main from GitHub
+2026-07-09T22:25:56.073375Z ERROR hermes_bootstrap_lib::bootstrap: bootstrap FAILED stage=None error=resolve install script failed: GET https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1: error sending request for url (https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1): client error (Connect): dns error: No such host is known. (os error 11001)
+2026-07-10T00:41:44.525861Z  INFO hermes_bootstrap_lib: Hermes Setup starting mode=Install
+2026-07-10T00:41:50.254449Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap starting pin=Pin { commit: None, branch: Some("main") } kind=Ps1 include_desktop=true
+2026-07-10T00:41:50.254914Z  INFO bootstrap.log: [bootstrap] downloading install.ps1 for main from GitHub
+2026-07-10T00:41:51.173468Z  INFO bootstrap.log: [bootstrap] cached to C:\Users\Arismendy\AppData\Local\hermes\bootstrap-cache\install-main.ps1
+2026-07-10T00:41:51.173630Z  INFO bootstrap.log: [bootstrap] script C:\Users\Arismendy\AppData\Local\hermes\bootstrap-cache\install-main.ps1 via downloaded
+2026-07-10T00:41:52.604142Z  INFO bootstrap.log: {"stages":[{"title":"Installing uv package manager","category":"prereqs","name":"uv","needs_user_input":false},{"title":"Verifying Python 3.11","category":"prereqs","name":"python","needs_user_input":false},{"title":"Installing Git","category":"prereqs","name":"git","needs_user_input":false},{"title":"Detecting Node.js","category":"prereqs","name":"node","needs_user_input":false},{"title":"Installing ripgrep and ffmpeg","category":"prereqs","name":"system-packages","needs_user_input":false},{"title":"Cloning Hermes repository","category":"install","name":"repository","needs_user_input":false},{"title":"Creating Python virtual environment","category":"install","name":"venv","needs_user_input":false},{"title":"Installing Python dependencies","category":"install","name":"dependencies","needs_user_input":false},{"title":"Installing Node.js dependencies","category":"install","name":"node-deps","needs_user_input":false},{"title":"Building desktop app","category":"install","name":"desktop","needs_user_input":false},{"title":"Adding Hermes to PATH","category":"finalize","name":"path","needs_user_input":false},{"title":"Writing configuration templates","category":"finalize","name":"config-templates","needs_user_input":false},{"title":"Installing messaging platform SDKs","category":"finalize","name":"platform-sdks","needs_user_input":false},{"title":"Marking install complete","category":"finalize","name":"bootstrap-marker","needs_user_input":false},{"title":"Configuring API keys and models","category":"post-install","name":"configure","needs_user_input":true},{"title":"Starting messaging gateway","category":"post-install","name":"gateway","needs_user_input":true}],"protocol_version":1} stage=__manifest__
+2026-07-10T00:41:52.648929Z  INFO hermes_bootstrap_lib::bootstrap: manifest received stage_count=16 names=["uv", "python", "git", "node", "system-packages", "repository", "venv", "dependencies", "node-deps", "desktop", "path", "config-templates", "platform-sdks", "bootstrap-marker", "configure", "gateway"]
+2026-07-10T00:41:52.649949Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=uv state=Running duration_ms=None error=None
+2026-07-10T00:41:54.294910Z  INFO bootstrap.log: [OK] Managed uv found (uv 0.11.28 (ebf0f43d7 2026-07-07 x86_64-pc-windows-msvc)) stage=uv
+2026-07-10T00:41:54.444566Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":170,"stage":"uv"} stage=uv
+2026-07-10T00:41:54.496806Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=uv state=Succeeded duration_ms=Some(1846) error=None
+2026-07-10T00:41:54.500388Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=python state=Running duration_ms=None error=None
+2026-07-10T00:41:56.019483Z  INFO bootstrap.log: -> Checking Python 3.11... stage=python
+2026-07-10T00:41:56.226630Z  INFO bootstrap.log: [OK] Python found: Python 3.11.15 stage=python
+2026-07-10T00:41:56.415459Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":298,"stage":"python"} stage=python
+2026-07-10T00:41:56.468898Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=python state=Succeeded duration_ms=Some(1968) error=None
+2026-07-10T00:41:56.468962Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=git state=Running duration_ms=None error=None
+2026-07-10T00:41:57.790363Z  INFO bootstrap.log: -> Checking Git... stage=git
+2026-07-10T00:41:57.918222Z  INFO bootstrap.log: [OK] Git found (git version 2.52.0.windows.1) stage=git
+2026-07-10T00:41:58.566576Z  INFO bootstrap.log: -> Set HERMES_GIT_BASH_PATH=C:\Program Files\Git\bin\bash.exe stage=git
+2026-07-10T00:41:58.739409Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":883,"stage":"git"} stage=git
+2026-07-10T00:41:58.776633Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=git state=Succeeded duration_ms=Some(2307) error=None
+2026-07-10T00:41:58.776717Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node state=Running duration_ms=None error=None
+2026-07-10T00:42:00.411929Z  INFO bootstrap.log: -> Checking Node.js (for browser tools)... stage=node
+2026-07-10T00:42:00.605152Z  INFO bootstrap.log: [OK] Node.js v22.20.0 found stage=node
+2026-07-10T00:42:00.784917Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":296,"stage":"node"} stage=node
+2026-07-10T00:42:00.830011Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node state=Succeeded duration_ms=Some(2053) error=None
+2026-07-10T00:42:00.830310Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=system-packages state=Running duration_ms=None error=None
+2026-07-10T00:42:02.273991Z  INFO bootstrap.log: -> Checking ripgrep (fast file search)... stage=system-packages
+2026-07-10T00:42:02.343613Z  INFO bootstrap.log: [OK] ripgrep 15.1.0 (rev af60c2de9d) found stage=system-packages
+2026-07-10T00:42:02.345835Z  INFO bootstrap.log: -> Checking ffmpeg (TTS voice messages)... stage=system-packages
+2026-07-10T00:42:02.353520Z  INFO bootstrap.log: [OK] ffmpeg found stage=system-packages
+2026-07-10T00:42:02.499814Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":197,"stage":"system-packages"} stage=system-packages
+2026-07-10T00:42:02.542965Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=system-packages state=Succeeded duration_ms=Some(1712) error=None
+2026-07-10T00:42:02.543051Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=repository state=Running duration_ms=None error=None
+2026-07-10T00:42:03.901841Z  INFO bootstrap.log: -> Installing to C:\Users\Arismendy\AppData\Local\hermes\hermes-agent... stage=repository
+2026-07-10T00:42:04.389245Z  INFO bootstrap.log: -> Existing installation found, updating... stage=repository
+2026-07-10T00:42:05.851127Z  WARN bootstrap.log: stderr: From https://github.com/NousResearch/hermes-agent stage=repository
+2026-07-10T00:42:05.851195Z  WARN bootstrap.log: stderr:  * branch            main       -> FETCH_HEAD stage=repository
+2026-07-10T00:42:06.190721Z  INFO bootstrap.log: Your branch and 'origin/main' have diverged, stage=repository
+2026-07-10T00:42:06.190996Z  WARN bootstrap.log: stderr: Already on 'main' stage=repository
+2026-07-10T00:42:06.191034Z  INFO bootstrap.log: and have 1 and 5 different commits each, respectively. stage=repository
+2026-07-10T00:42:06.191059Z  INFO bootstrap.log:   (use "git pull" if you want to integrate the remote branch with yours) stage=repository
+2026-07-10T00:42:06.945793Z  WARN bootstrap.log: stderr: From https://github.com/NousResearch/hermes-agent stage=repository
+2026-07-10T00:42:06.945850Z  WARN bootstrap.log: stderr:  * branch            main       -> FETCH_HEAD stage=repository
+2026-07-10T00:42:07.011135Z  WARN bootstrap.log: stderr: hint: Diverging branches can't be fast-forwarded, you need to either: stage=repository
+2026-07-10T00:42:07.011243Z  WARN bootstrap.log: stderr: hint: stage=repository
+2026-07-10T00:42:07.013389Z  WARN bootstrap.log: stderr: hint: 	git merge --no-ff stage=repository
+2026-07-10T00:42:07.013439Z  WARN bootstrap.log: stderr: hint: stage=repository
+2026-07-10T00:42:07.013469Z  WARN bootstrap.log: stderr: hint: or: stage=repository
+2026-07-10T00:42:07.013499Z  WARN bootstrap.log: stderr: hint: stage=repository
+2026-07-10T00:42:07.013525Z  WARN bootstrap.log: stderr: hint: 	git rebase stage=repository
+2026-07-10T00:42:07.013548Z  WARN bootstrap.log: stderr: hint: stage=repository
+2026-07-10T00:42:07.013570Z  WARN bootstrap.log: stderr: hint: Disable this message with "git config set advice.diverging false" stage=repository
+2026-07-10T00:42:07.013800Z  WARN bootstrap.log: stderr: fatal: Not possible to fast-forward, aborting. stage=repository
+2026-07-10T00:42:07.033323Z  INFO bootstrap.log: [!] Fast-forward not possible; resetting managed install to origin/main... stage=repository
+2026-07-10T00:42:08.295713Z  INFO bootstrap.log: HEAD is now at 10c0d9b fix(cron): contain any per-job exception in the due scan; harden as a class stage=repository
+2026-07-10T00:42:08.738949Z  INFO bootstrap.log: [OK] Repository ready stage=repository
+2026-07-10T00:42:08.893637Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":4937,"stage":"repository"} stage=repository
+2026-07-10T00:42:08.940060Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=repository state=Succeeded duration_ms=Some(6396) error=None
+2026-07-10T00:42:08.940162Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=venv state=Running duration_ms=None error=None
+2026-07-10T00:42:10.731339Z  INFO bootstrap.log: -> Creating virtual environment with Python 3.11... stage=venv
+2026-07-10T00:42:10.753522Z  INFO bootstrap.log: -> Virtual environment already exists, recreating... stage=venv
+2026-07-10T00:42:10.755970Z  INFO bootstrap.log: -> Stopping any running hermes processes before recreating venv... stage=venv
+2026-07-10T00:42:28.229909Z  WARN bootstrap.log: stderr: Using CPython 3.11.15 stage=venv
+2026-07-10T00:42:28.249990Z  WARN bootstrap.log: stderr: Creating virtual environment at: venv stage=venv
+2026-07-10T00:42:28.727288Z  WARN bootstrap.log: stderr: Activate with: venv\Scripts\activate stage=venv
+2026-07-10T00:42:28.831550Z  INFO bootstrap.log: [OK] Virtual environment ready (Python 3.11) stage=venv
+2026-07-10T00:42:29.049427Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":18327,"stage":"venv"} stage=venv
+2026-07-10T00:42:29.102260Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=venv state=Succeeded duration_ms=Some(20162) error=None
+2026-07-10T00:42:29.102355Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=dependencies state=Running duration_ms=None error=None
+2026-07-10T00:42:31.114859Z  INFO bootstrap.log: -> Installing dependencies... stage=dependencies
+2026-07-10T00:42:31.132197Z  INFO bootstrap.log: -> Trying tier: hash-verified (uv.lock) ... stage=dependencies
+2026-07-10T00:42:31.364124Z  WARN bootstrap.log: stderr: Resolved 233 packages in 10ms stage=dependencies
+2026-07-10T00:42:45.080329Z  WARN bootstrap.log: stderr: Installed 99 packages in 13.54s stage=dependencies
+2026-07-10T00:42:45.080365Z  WARN bootstrap.log: stderr:  + agent-client-protocol==0.9.0 stage=dependencies
+2026-07-10T00:42:45.080389Z  WARN bootstrap.log: stderr:  + aiohappyeyeballs==2.6.1 stage=dependencies
+2026-07-10T00:42:45.080532Z  WARN bootstrap.log: stderr:  + aiohttp==3.14.1 stage=dependencies
+2026-07-10T00:42:45.080557Z  WARN bootstrap.log: stderr:  + aiosignal==1.4.0 stage=dependencies
+2026-07-10T00:42:45.080581Z  WARN bootstrap.log: stderr:  + annotated-doc==0.0.4 stage=dependencies
+2026-07-10T00:42:45.080602Z  WARN bootstrap.log: stderr:  + annotated-types==0.7.0 stage=dependencies
+2026-07-10T00:42:45.080622Z  WARN bootstrap.log: stderr:  + anyio==4.12.1 stage=dependencies
+2026-07-10T00:42:45.080642Z  WARN bootstrap.log: stderr:  + attrs==25.4.0 stage=dependencies
+2026-07-10T00:42:45.080664Z  WARN bootstrap.log: stderr:  + certifi==2026.5.20 stage=dependencies
+2026-07-10T00:42:45.080764Z  WARN bootstrap.log: stderr:  + cffi==2.0.0 stage=dependencies
+2026-07-10T00:42:45.080831Z  WARN bootstrap.log: stderr:  + charset-normalizer==3.4.4 stage=dependencies
+2026-07-10T00:42:45.092032Z  WARN bootstrap.log: stderr:  + click==8.3.1 stage=dependencies
+2026-07-10T00:42:45.092065Z  WARN bootstrap.log: stderr:  + colorama==0.4.6 stage=dependencies
+2026-07-10T00:42:45.092250Z  WARN bootstrap.log: stderr:  + concurrent-log-handler==0.9.29 stage=dependencies
+2026-07-10T00:42:45.092308Z  WARN bootstrap.log: stderr:  + croniter==6.0.0 stage=dependencies
+2026-07-10T00:42:45.092345Z  WARN bootstrap.log: stderr:  + cryptography==46.0.7 stage=dependencies
+2026-07-10T00:42:45.092380Z  WARN bootstrap.log: stderr:  + defusedxml==0.7.1 stage=dependencies
+2026-07-10T00:42:45.092406Z  WARN bootstrap.log: stderr:  + distro==1.9.0 stage=dependencies
+2026-07-10T00:42:45.092615Z  WARN bootstrap.log: stderr:  + fastapi==0.133.1 stage=dependencies
+2026-07-10T00:42:45.093124Z  WARN bootstrap.log: stderr:  + fire==0.7.1 stage=dependencies
+2026-07-10T00:42:45.093749Z  WARN bootstrap.log: stderr:  + frozenlist==1.8.0 stage=dependencies
+2026-07-10T00:42:45.094296Z  WARN bootstrap.log: stderr:  + google-api-core==2.30.3 stage=dependencies
+2026-07-10T00:42:45.094955Z  WARN bootstrap.log: stderr:  + google-api-python-client==2.194.0 stage=dependencies
+2026-07-10T00:42:45.095609Z  WARN bootstrap.log: stderr:  + google-auth==2.55.1 stage=dependencies
+2026-07-10T00:42:45.096298Z  WARN bootstrap.log: stderr:  + google-auth-httplib2==0.3.1 stage=dependencies
+2026-07-10T00:42:45.096955Z  WARN bootstrap.log: stderr:  + google-auth-oauthlib==1.3.1 stage=dependencies
+2026-07-10T00:42:45.097604Z  WARN bootstrap.log: stderr:  + googleapis-common-protos==1.73.0 stage=dependencies
+2026-07-10T00:42:45.098287Z  WARN bootstrap.log: stderr:  + h11==0.16.0 stage=dependencies
+2026-07-10T00:42:45.099226Z  WARN bootstrap.log: stderr:  + hermes-agent==0.18.2 (from file:///C:/Users/Arismendy/AppData/Local/hermes/hermes-agent) stage=dependencies
+2026-07-10T00:42:45.100502Z  WARN bootstrap.log: stderr:  + httpcore==1.0.9 stage=dependencies
+2026-07-10T00:42:45.100603Z  WARN bootstrap.log: stderr:  + httplib2==0.31.2 stage=dependencies
+2026-07-10T00:42:45.101208Z  WARN bootstrap.log: stderr:  + httptools==0.7.1 stage=dependencies
+2026-07-10T00:42:45.101883Z  WARN bootstrap.log: stderr:  + httpx==0.28.1 stage=dependencies
+2026-07-10T00:42:45.102584Z  WARN bootstrap.log: stderr:  + httpx-sse==0.4.3 stage=dependencies
+2026-07-10T00:42:45.103122Z  WARN bootstrap.log: stderr:  + idna==3.15 stage=dependencies
+2026-07-10T00:42:45.103907Z  WARN bootstrap.log: stderr:  + jinja2==3.1.6 stage=dependencies
+2026-07-10T00:42:45.104497Z  WARN bootstrap.log: stderr:  + jiter==0.13.0 stage=dependencies
+2026-07-10T00:42:45.105233Z  WARN bootstrap.log: stderr:  + jsonschema==4.26.0 stage=dependencies
+2026-07-10T00:42:45.107225Z  WARN bootstrap.log: stderr:  + jsonschema-specifications==2025.9.1 stage=dependencies
+2026-07-10T00:42:45.107402Z  WARN bootstrap.log: stderr:  + markdown==3.10.2 stage=dependencies
+2026-07-10T00:42:45.108109Z  WARN bootstrap.log: stderr:  + markdown-it-py==4.0.0 stage=dependencies
+2026-07-10T00:42:45.108869Z  WARN bootstrap.log: stderr:  + markupsafe==3.0.3 stage=dependencies
+2026-07-10T00:42:45.109523Z  WARN bootstrap.log: stderr:  + mcp==1.26.0 stage=dependencies
+2026-07-10T00:42:45.110243Z  WARN bootstrap.log: stderr:  + mdurl==0.1.2 stage=dependencies
+2026-07-10T00:42:45.110907Z  WARN bootstrap.log: stderr:  + multidict==6.7.1 stage=dependencies
+2026-07-10T00:42:45.111558Z  WARN bootstrap.log: stderr:  + oauthlib==3.3.1 stage=dependencies
+2026-07-10T00:42:45.112253Z  WARN bootstrap.log: stderr:  + openai==2.24.0 stage=dependencies
+2026-07-10T00:42:45.112823Z  WARN bootstrap.log: stderr:  + packaging==26.0 stage=dependencies
+2026-07-10T00:42:45.113588Z  WARN bootstrap.log: stderr:  + pathspec==1.1.1 stage=dependencies
+2026-07-10T00:42:45.114248Z  WARN bootstrap.log: stderr:  + pillow==12.2.0 stage=dependencies
+2026-07-10T00:42:45.130116Z  WARN bootstrap.log: stderr:  + portalocker==3.2.0 stage=dependencies
+2026-07-10T00:42:45.132892Z  WARN bootstrap.log: stderr:  + prompt-toolkit==3.0.52 stage=dependencies
+2026-07-10T00:42:45.134355Z  WARN bootstrap.log: stderr:  + propcache==0.4.1 stage=dependencies
+2026-07-10T00:42:45.171208Z  WARN bootstrap.log: stderr:  + proto-plus==1.27.2 stage=dependencies
+2026-07-10T00:42:45.171240Z  WARN bootstrap.log: stderr:  + protobuf==6.33.5 stage=dependencies
+2026-07-10T00:42:45.171281Z  WARN bootstrap.log: stderr:  + psutil==7.2.2 stage=dependencies
+2026-07-10T00:42:45.171305Z  WARN bootstrap.log: stderr:  + pyasn1==0.6.3 stage=dependencies
+2026-07-10T00:42:45.171346Z  WARN bootstrap.log: stderr:  + pyasn1-modules==0.4.2 stage=dependencies
+2026-07-10T00:42:45.171406Z  WARN bootstrap.log: stderr:  + pycparser==3.0 stage=dependencies
+2026-07-10T00:42:45.171431Z  WARN bootstrap.log: stderr:  + pydantic==2.13.4 stage=dependencies
+2026-07-10T00:42:45.171515Z  WARN bootstrap.log: stderr:  + pydantic-core==2.46.4 stage=dependencies
+2026-07-10T00:42:45.171715Z  WARN bootstrap.log: stderr:  + pydantic-settings==2.13.1 stage=dependencies
+2026-07-10T00:42:45.171763Z  WARN bootstrap.log: stderr:  + pygments==2.19.2 stage=dependencies
+2026-07-10T00:42:45.171792Z  WARN bootstrap.log: stderr:  + pyjwt==2.13.0 stage=dependencies
+2026-07-10T00:42:45.175393Z  WARN bootstrap.log: stderr:  + pyparsing==3.3.2 stage=dependencies
+2026-07-10T00:42:45.175583Z  WARN bootstrap.log: stderr:  + python-dateutil==2.9.0.post0 stage=dependencies
+2026-07-10T00:42:45.175687Z  WARN bootstrap.log: stderr:  + python-dotenv==1.2.2 stage=dependencies
+2026-07-10T00:42:45.175886Z  WARN bootstrap.log: stderr:  + python-multipart==0.0.27 stage=dependencies
+2026-07-10T00:42:45.175997Z  WARN bootstrap.log: stderr:  + pytz==2025.2 stage=dependencies
+2026-07-10T00:42:45.176929Z  WARN bootstrap.log: stderr:  + pywin32==311 stage=dependencies
+2026-07-10T00:42:45.177610Z  WARN bootstrap.log: stderr:  + pywinpty==2.0.15 stage=dependencies
+2026-07-10T00:42:45.177744Z  WARN bootstrap.log: stderr:  + pyyaml==6.0.3 stage=dependencies
+2026-07-10T00:42:45.177766Z  WARN bootstrap.log: stderr:  + referencing==0.37.0 stage=dependencies
+2026-07-10T00:42:45.177787Z  WARN bootstrap.log: stderr:  + requests==2.33.0 stage=dependencies
+2026-07-10T00:42:45.177848Z  WARN bootstrap.log: stderr:  + requests-oauthlib==2.0.0 stage=dependencies
+2026-07-10T00:42:45.177871Z  WARN bootstrap.log: stderr:  + rich==14.3.3 stage=dependencies
+2026-07-10T00:42:45.194862Z  WARN bootstrap.log: stderr:  + rpds-py==0.30.0 stage=dependencies
+2026-07-10T00:42:45.200150Z  WARN bootstrap.log: stderr:  + ruamel-yaml==0.18.17 stage=dependencies
+2026-07-10T00:42:45.200364Z  WARN bootstrap.log: stderr:  + ruamel-yaml-clib==0.2.15 stage=dependencies
+2026-07-10T00:42:45.200389Z  WARN bootstrap.log: stderr:  + simple-term-menu==1.6.6 stage=dependencies
+2026-07-10T00:42:45.200411Z  WARN bootstrap.log: stderr:  + six==1.17.0 stage=dependencies
+2026-07-10T00:42:45.201321Z  WARN bootstrap.log: stderr:  + sniffio==1.3.1 stage=dependencies
+2026-07-10T00:42:45.201477Z  WARN bootstrap.log: stderr:  + socksio==1.0.0 stage=dependencies
+2026-07-10T00:42:45.203692Z  WARN bootstrap.log: stderr:  + sse-starlette==3.3.2 stage=dependencies
+2026-07-10T00:42:45.208498Z  WARN bootstrap.log: stderr:  + starlette==1.0.1 stage=dependencies
+2026-07-10T00:42:45.210520Z  WARN bootstrap.log: stderr:  + tenacity==9.1.4 stage=dependencies
+2026-07-10T00:42:45.212156Z  WARN bootstrap.log: stderr:  + termcolor==3.3.0 stage=dependencies
+2026-07-10T00:42:45.213615Z  WARN bootstrap.log: stderr:  + tqdm==4.67.3 stage=dependencies
+2026-07-10T00:42:45.215135Z  WARN bootstrap.log: stderr:  + typing-extensions==4.15.0 stage=dependencies
+2026-07-10T00:42:45.216652Z  WARN bootstrap.log: stderr:  + typing-inspection==0.4.2 stage=dependencies
+2026-07-10T00:42:45.218122Z  WARN bootstrap.log: stderr:  + tzdata==2025.3 stage=dependencies
+2026-07-10T00:42:45.219952Z  WARN bootstrap.log: stderr:  + uritemplate==4.2.0 stage=dependencies
+2026-07-10T00:42:45.221722Z  WARN bootstrap.log: stderr:  + urllib3==2.7.0 stage=dependencies
+2026-07-10T00:42:45.225562Z  WARN bootstrap.log: stderr:  + uvicorn==0.41.0 stage=dependencies
+2026-07-10T00:42:45.234486Z  WARN bootstrap.log: stderr:  + watchfiles==1.1.1 stage=dependencies
+2026-07-10T00:42:45.236470Z  WARN bootstrap.log: stderr:  + wcwidth==0.6.0 stage=dependencies
+2026-07-10T00:42:45.240720Z  WARN bootstrap.log: stderr:  + websockets==15.0.1 stage=dependencies
+2026-07-10T00:42:45.244111Z  WARN bootstrap.log: stderr:  + yarl==1.22.0 stage=dependencies
+2026-07-10T00:42:45.246525Z  WARN bootstrap.log: stderr:  + youtube-transcript-api==1.2.4 stage=dependencies
+2026-07-10T00:42:45.297401Z  INFO bootstrap.log: [OK] Main package installed (hash-verified via uv.lock) stage=dependencies
+2026-07-10T00:42:58.356174Z  INFO bootstrap.log: [OK] Baseline imports verified in venv stage=dependencies
+2026-07-10T00:43:03.338090Z  INFO bootstrap.log: [OK] All dependencies installed stage=dependencies
+2026-07-10T00:43:03.516249Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":32373,"stage":"dependencies"} stage=dependencies
+2026-07-10T00:43:03.563581Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=dependencies state=Succeeded duration_ms=Some(34461) error=None
+2026-07-10T00:43:03.563653Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node-deps state=Running duration_ms=None error=None
+2026-07-10T00:43:05.064454Z  INFO bootstrap.log: -> Using npm.cmd (PowerShell execution policy blocks npm.ps1) stage=node-deps
+2026-07-10T00:43:05.068473Z  INFO bootstrap.log: -> Installing Node.js dependencies (browser tools)... stage=node-deps
+2026-07-10T00:46:06.146363Z  INFO bootstrap.log: [!] Browser tools npm install failed -- exit code 1 stage=node-deps
+2026-07-10T00:46:06.168235Z  INFO bootstrap.log: -> Run manually later: cd "C:\Users\Arismendy\AppData\Local\hermes\hermes-agent"; npm install stage=node-deps
+2026-07-10T00:46:06.187262Z  INFO bootstrap.log: -> Installing TUI dependencies... stage=node-deps
+2026-07-10T00:46:55.763403Z  INFO bootstrap.log: [OK] TUI dependencies installed stage=node-deps
+2026-07-10T00:46:55.954392Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":230929,"stage":"node-deps"} stage=node-deps
+2026-07-10T00:46:55.996089Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node-deps state=Succeeded duration_ms=Some(232432) error=None
+2026-07-10T00:46:55.996177Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=desktop state=Running duration_ms=None error=None
+2026-07-10T00:46:57.523466Z  INFO bootstrap.log: -> Checking Node.js (for browser tools)... stage=desktop
+2026-07-10T00:46:57.679354Z  INFO bootstrap.log: [OK] Node.js v22.20.0 found stage=desktop
+2026-07-10T00:46:57.713747Z  INFO bootstrap.log: -> Installing desktop workspace dependencies (this includes Electron ~150MB, takes 1-3min)... stage=desktop
+2026-07-10T00:47:50.630128Z  INFO bootstrap.log: npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful. stage=desktop
+2026-07-10T00:47:51.693934Z  INFO bootstrap.log: npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported stage=desktop
+2026-07-10T00:47:52.949584Z  INFO bootstrap.log: npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me stage=desktop
+2026-07-10T00:48:00.804276Z  INFO bootstrap.log: npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info. stage=desktop
+2026-07-10T00:48:05.933353Z  INFO bootstrap.log: npm warn deprecated rcedit@5.0.2: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info. stage=desktop
+2026-07-10T00:51:42.427924Z  INFO bootstrap.log: npm error code ETIMEDOUT stage=desktop
+2026-07-10T00:51:42.428237Z  INFO bootstrap.log: npm error errno ETIMEDOUT stage=desktop
+2026-07-10T00:51:42.428269Z  INFO bootstrap.log: npm error network request to https://registry.npmjs.org/node-pty/-/node-pty-1.1.0.tgz failed, reason:  stage=desktop
+2026-07-10T00:51:42.563958Z  INFO bootstrap.log: npm error network This is a problem related to network connectivity. stage=desktop
+2026-07-10T00:51:42.573905Z  INFO bootstrap.log: npm error network In most cases you are behind a proxy or have bad network settings. stage=desktop
+2026-07-10T00:51:42.641015Z  INFO bootstrap.log: npm error network stage=desktop
+2026-07-10T00:51:42.684253Z  INFO bootstrap.log: npm error network If you are behind a proxy, please make sure that the 'proxy' config is set properly.  See: 'npm help config' stage=desktop
+2026-07-10T00:51:42.689229Z  INFO bootstrap.log: npm error A complete log of this run can be found in: C:\Users\Arismendy\AppData\Local\npm-cache\_logs\2026-07-10T00_46_58_707Z-debug-0.log stage=desktop
+2026-07-10T00:51:42.754322Z  INFO bootstrap.log: ->   npm ci failed (exit 1) -- retrying with npm install... stage=desktop
+2026-07-10T00:52:15.337324Z  INFO bootstrap.log: npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful. stage=desktop
+2026-07-10T00:52:16.611978Z  INFO bootstrap.log: npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported stage=desktop
+2026-07-10T00:52:18.176568Z  INFO bootstrap.log: npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me stage=desktop
+2026-07-10T00:52:26.927591Z  INFO bootstrap.log: npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info. stage=desktop
+2026-07-10T00:52:31.856280Z  INFO bootstrap.log: npm warn deprecated rcedit@5.0.2: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info. stage=desktop
+2026-07-10T00:56:00.274286Z  INFO bootstrap.log: npm error code ENOTFOUND stage=desktop
+2026-07-10T00:56:00.274863Z  INFO bootstrap.log: npm error syscall getaddrinfo stage=desktop
+2026-07-10T00:56:00.278361Z  INFO bootstrap.log: npm error errno ENOTFOUND stage=desktop
+2026-07-10T00:56:00.280336Z  INFO bootstrap.log: npm error network request to https://registry.npmjs.org/node-pty/-/node-pty-1.1.0.tgz failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org stage=desktop
+2026-07-10T00:56:00.346368Z  INFO bootstrap.log: npm error network This is a problem related to network connectivity. stage=desktop
+2026-07-10T00:56:00.389220Z  INFO bootstrap.log: npm error network In most cases you are behind a proxy or have bad network settings. stage=desktop
+2026-07-10T00:56:00.405957Z  INFO bootstrap.log: npm error network stage=desktop
+2026-07-10T00:56:00.462608Z  INFO bootstrap.log: npm error network If you are behind a proxy, please make sure that the 'proxy' config is set properly.  See: 'npm help config' stage=desktop
+2026-07-10T00:56:00.462705Z  INFO bootstrap.log: npm error A complete log of this run can be found in: C:\Users\Arismendy\AppData\Local\npm-cache\_logs\2026-07-10T00_51_45_608Z-debug-0.log stage=desktop
+2026-07-10T00:56:00.832410Z  INFO bootstrap.log: {"skipped":false,"ok":false,"reason":"desktop workspace npm install failed (exit 1) -- see lines above for cause","duration_ms":543179,"stage":"desktop"} stage=desktop
+2026-07-10T00:56:00.878482Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=desktop state=Failed duration_ms=Some(544882) error=Some("desktop workspace npm install failed (exit 1) -- see lines above for cause")
+2026-07-10T00:56:00.878775Z ERROR hermes_bootstrap_lib::bootstrap: bootstrap FAILED stage=Some("desktop") error=desktop workspace npm install failed (exit 1) -- see lines above for cause
+2026-07-10T02:05:24.289592Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap starting pin=Pin { commit: None, branch: Some("main") } kind=Ps1 include_desktop=true
+2026-07-10T02:05:24.291386Z  INFO bootstrap.log: [bootstrap] using cached install.ps1 for main
+2026-07-10T02:05:24.291423Z  INFO bootstrap.log: [bootstrap] script C:\Users\Arismendy\AppData\Local\hermes\bootstrap-cache\install-main.ps1 via cached
+2026-07-10T02:05:25.311929Z  INFO bootstrap.log: {"stages":[{"title":"Installing uv package manager","category":"prereqs","name":"uv","needs_user_input":false},{"title":"Verifying Python 3.11","category":"prereqs","name":"python","needs_user_input":false},{"title":"Installing Git","category":"prereqs","name":"git","needs_user_input":false},{"title":"Detecting Node.js","category":"prereqs","name":"node","needs_user_input":false},{"title":"Installing ripgrep and ffmpeg","category":"prereqs","name":"system-packages","needs_user_input":false},{"title":"Cloning Hermes repository","category":"install","name":"repository","needs_user_input":false},{"title":"Creating Python virtual environment","category":"install","name":"venv","needs_user_input":false},{"title":"Installing Python dependencies","category":"install","name":"dependencies","needs_user_input":false},{"title":"Installing Node.js dependencies","category":"install","name":"node-deps","needs_user_input":false},{"title":"Building desktop app","category":"install","name":"desktop","needs_user_input":false},{"title":"Adding Hermes to PATH","category":"finalize","name":"path","needs_user_input":false},{"title":"Writing configuration templates","category":"finalize","name":"config-templates","needs_user_input":false},{"title":"Installing messaging platform SDKs","category":"finalize","name":"platform-sdks","needs_user_input":false},{"title":"Marking install complete","category":"finalize","name":"bootstrap-marker","needs_user_input":false},{"title":"Configuring API keys and models","category":"post-install","name":"configure","needs_user_input":true},{"title":"Starting messaging gateway","category":"post-install","name":"gateway","needs_user_input":true}],"protocol_version":1} stage=__manifest__
+2026-07-10T02:05:25.344517Z  INFO hermes_bootstrap_lib::bootstrap: manifest received stage_count=16 names=["uv", "python", "git", "node", "system-packages", "repository", "venv", "dependencies", "node-deps", "desktop", "path", "config-templates", "platform-sdks", "bootstrap-marker", "configure", "gateway"]
+2026-07-10T02:05:25.344625Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=uv state=Running duration_ms=None error=None
+2026-07-10T02:05:26.355971Z  INFO bootstrap.log: [OK] Managed uv found (uv 0.11.28 (ebf0f43d7 2026-07-07 x86_64-pc-windows-msvc)) stage=uv
+2026-07-10T02:05:26.464391Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":133,"stage":"uv"} stage=uv
+2026-07-10T02:05:26.495736Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=uv state=Succeeded duration_ms=Some(1151) error=None
+2026-07-10T02:05:26.495882Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=python state=Running duration_ms=None error=None
+2026-07-10T02:05:27.540933Z  INFO bootstrap.log: -> Checking Python 3.11... stage=python
+2026-07-10T02:05:27.659410Z  INFO bootstrap.log: [OK] Python found: Python 3.11.15 stage=python
+2026-07-10T02:05:27.776909Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":225,"stage":"python"} stage=python
+2026-07-10T02:05:27.812820Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=python state=Succeeded duration_ms=Some(1316) error=None
+2026-07-10T02:05:27.812880Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=git state=Running duration_ms=None error=None
+2026-07-10T02:05:28.845009Z  INFO bootstrap.log: -> Checking Git... stage=git
+2026-07-10T02:05:28.940919Z  INFO bootstrap.log: [OK] Git found (git version 2.52.0.windows.1) stage=git
+2026-07-10T02:05:29.505605Z  INFO bootstrap.log: -> Set HERMES_GIT_BASH_PATH=C:\Program Files\Git\bin\bash.exe stage=git
+2026-07-10T02:05:29.649666Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":750,"stage":"git"} stage=git
+2026-07-10T02:05:29.681387Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=git state=Succeeded duration_ms=Some(1868) error=None
+2026-07-10T02:05:29.681474Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node state=Running duration_ms=None error=None
+2026-07-10T02:05:30.681475Z  INFO bootstrap.log: -> Checking Node.js (for browser tools)... stage=node
+2026-07-10T02:05:30.788886Z  INFO bootstrap.log: [OK] Node.js v22.20.0 found stage=node
+2026-07-10T02:05:30.906436Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":172,"stage":"node"} stage=node
+2026-07-10T02:05:30.942207Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node state=Succeeded duration_ms=Some(1260) error=None
+2026-07-10T02:05:30.942273Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=system-packages state=Running duration_ms=None error=None
+2026-07-10T02:05:31.955647Z  INFO bootstrap.log: -> Checking ripgrep (fast file search)... stage=system-packages
+2026-07-10T02:05:31.999812Z  INFO bootstrap.log: [OK] ripgrep 15.1.0 (rev af60c2de9d) found stage=system-packages
+2026-07-10T02:05:32.001883Z  INFO bootstrap.log: -> Checking ffmpeg (TTS voice messages)... stage=system-packages
+2026-07-10T02:05:32.018311Z  INFO bootstrap.log: [OK] ffmpeg found stage=system-packages
+2026-07-10T02:05:32.137576Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":139,"stage":"system-packages"} stage=system-packages
+2026-07-10T02:05:32.171607Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=system-packages state=Succeeded duration_ms=Some(1229) error=None
+2026-07-10T02:05:32.171679Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=repository state=Running duration_ms=None error=None
+2026-07-10T02:05:33.306322Z  INFO bootstrap.log: -> Installing to C:\Users\Arismendy\AppData\Local\hermes\hermes-agent... stage=repository
+2026-07-10T02:05:33.755393Z  INFO bootstrap.log: -> Existing installation found, updating... stage=repository
+2026-07-10T02:05:34.267848Z  INFO bootstrap.log: -> Discarded npm lockfile churn (1 file(s)) stage=repository
+2026-07-10T02:05:35.170698Z  WARN bootstrap.log: stderr: From https://github.com/NousResearch/hermes-agent stage=repository
+2026-07-10T02:05:35.170758Z  WARN bootstrap.log: stderr:  * branch            main       -> FETCH_HEAD stage=repository
+2026-07-10T02:05:35.498933Z  INFO bootstrap.log: Your branch is behind 'origin/main' by 13 commits, and can be fast-forwarded. stage=repository
+2026-07-10T02:05:35.498978Z  INFO bootstrap.log:   (use "git pull" to update your local branch) stage=repository
+2026-07-10T02:05:35.499925Z  WARN bootstrap.log: stderr: Already on 'main' stage=repository
+2026-07-10T02:05:36.144723Z  WARN bootstrap.log: stderr: From https://github.com/NousResearch/hermes-agent stage=repository
+2026-07-10T02:05:36.144959Z  WARN bootstrap.log: stderr:  * branch            main       -> FETCH_HEAD stage=repository
+2026-07-10T02:05:36.443235Z  INFO bootstrap.log: Updating 10c0d9b..a7f65e3 stage=repository
+2026-07-10T02:05:36.443279Z  INFO bootstrap.log: Fast-forward stage=repository
+2026-07-10T02:05:36.561818Z  INFO bootstrap.log:  agent/agent_runtime_helpers.py                     |   5 + stage=repository
+2026-07-10T02:05:36.561882Z  INFO bootstrap.log:  cli.py                                             |   2 + stage=repository
+2026-07-10T02:05:36.561906Z  INFO bootstrap.log:  gateway/config.py                                  |  37 +++- stage=repository
+2026-07-10T02:05:36.561925Z  INFO bootstrap.log:  gateway/run.py                                     |  24 +- stage=repository
+2026-07-10T02:05:36.561978Z  INFO bootstrap.log:  gateway/slash_commands.py                          |  46 ++-- stage=repository
+2026-07-10T02:05:36.562059Z  INFO bootstrap.log:  hermes_cli/config.py                               |   8 + stage=repository
+2026-07-10T02:05:36.562123Z  INFO bootstrap.log:  plugins/memory/holographic/__init__.py             |  12 +- stage=repository
+2026-07-10T02:05:36.562156Z  INFO bootstrap.log:  plugins/memory/holographic/store.py                |  79 ++++++- stage=repository
+2026-07-10T02:05:36.562178Z  INFO bootstrap.log:  scripts/release.py                                 |   3 + stage=repository
+2026-07-10T02:05:36.562268Z  INFO bootstrap.log:  tests/gateway/test_compress_command.py             |  28 ++- stage=repository
+2026-07-10T02:05:36.562468Z  INFO bootstrap.log:  tests/gateway/test_config.py                       |  59 +++++ stage=repository
+2026-07-10T02:05:36.562613Z  INFO bootstrap.log:  tests/gateway/test_session_hygiene.py              |   7 +- stage=repository
+2026-07-10T02:05:36.562704Z  INFO bootstrap.log:  tests/hermes_cli/test_argparse_flag_propagation.py |  59 ++++- stage=repository
+2026-07-10T02:05:36.562786Z  INFO bootstrap.log:  tests/hermes_cli/test_config.py                    |  28 +++ stage=repository
+2026-07-10T02:05:36.562827Z  INFO bootstrap.log:  tests/hermes_cli/test_config_env_expansion.py      |  12 + stage=repository
+2026-07-10T02:05:36.562991Z  INFO bootstrap.log:  tests/plugins/memory/test_holographic_store.py     | 243 +++++++++++++++++++++ stage=repository
+2026-07-10T02:05:36.563408Z  INFO bootstrap.log:  .../test_switch_model_reapplies_headers.py         | 100 +++++++++ stage=repository
+2026-07-10T02:05:36.563872Z  INFO bootstrap.log:  17 files changed, 681 insertions(+), 71 deletions(-) stage=repository
+2026-07-10T02:05:36.563902Z  INFO bootstrap.log:  create mode 100644 tests/plugins/memory/test_holographic_store.py stage=repository
+2026-07-10T02:05:36.564199Z  INFO bootstrap.log:  create mode 100644 tests/run_agent/test_switch_model_reapplies_headers.py stage=repository
+2026-07-10T02:05:36.783622Z  INFO bootstrap.log: [OK] Repository ready stage=repository
+2026-07-10T02:05:36.898103Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":3548,"stage":"repository"} stage=repository
+2026-07-10T02:05:36.930098Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=repository state=Succeeded duration_ms=Some(4758) error=None
+2026-07-10T02:05:36.930163Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=venv state=Running duration_ms=None error=None
+2026-07-10T02:05:38.721961Z  INFO bootstrap.log: -> Creating virtual environment with Python 3.11... stage=venv
+2026-07-10T02:05:38.730541Z  INFO bootstrap.log: -> Virtual environment already exists, recreating... stage=venv
+2026-07-10T02:05:38.733119Z  INFO bootstrap.log: -> Stopping any running hermes processes before recreating venv... stage=venv
+2026-07-10T02:05:54.002260Z  WARN bootstrap.log: stderr: Using CPython 3.11.15 stage=venv
+2026-07-10T02:05:54.003176Z  WARN bootstrap.log: stderr: Creating virtual environment at: venv stage=venv
+2026-07-10T02:05:54.475753Z  WARN bootstrap.log: stderr: Activate with: venv\Scripts\activate stage=venv
+2026-07-10T02:05:54.590255Z  INFO bootstrap.log: [OK] Virtual environment ready (Python 3.11) stage=venv
+2026-07-10T02:05:54.797000Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":16120,"stage":"venv"} stage=venv
+2026-07-10T02:05:54.854263Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=venv state=Succeeded duration_ms=Some(17924) error=None
+2026-07-10T02:05:54.854330Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=dependencies state=Running duration_ms=None error=None
+2026-07-10T02:05:56.990387Z  INFO bootstrap.log: -> Installing dependencies... stage=dependencies
+2026-07-10T02:05:57.005935Z  INFO bootstrap.log: -> Trying tier: hash-verified (uv.lock) ... stage=dependencies
+2026-07-10T02:05:57.155318Z  WARN bootstrap.log: stderr: Resolved 233 packages in 7ms stage=dependencies
+2026-07-10T02:06:08.358590Z  WARN bootstrap.log: stderr: Installed 99 packages in 11.05s stage=dependencies
+2026-07-10T02:06:08.358637Z  WARN bootstrap.log: stderr:  + agent-client-protocol==0.9.0 stage=dependencies
+2026-07-10T02:06:08.358710Z  WARN bootstrap.log: stderr:  + aiohappyeyeballs==2.6.1 stage=dependencies
+2026-07-10T02:06:08.358741Z  WARN bootstrap.log: stderr:  + aiohttp==3.14.1 stage=dependencies
+2026-07-10T02:06:08.358771Z  WARN bootstrap.log: stderr:  + aiosignal==1.4.0 stage=dependencies
+2026-07-10T02:06:08.358794Z  WARN bootstrap.log: stderr:  + annotated-doc==0.0.4 stage=dependencies
+2026-07-10T02:06:08.358849Z  WARN bootstrap.log: stderr:  + annotated-types==0.7.0 stage=dependencies
+2026-07-10T02:06:08.358879Z  WARN bootstrap.log: stderr:  + anyio==4.12.1 stage=dependencies
+2026-07-10T02:06:08.358905Z  WARN bootstrap.log: stderr:  + attrs==25.4.0 stage=dependencies
+2026-07-10T02:06:08.358953Z  WARN bootstrap.log: stderr:  + certifi==2026.5.20 stage=dependencies
+2026-07-10T02:06:08.359031Z  WARN bootstrap.log: stderr:  + cffi==2.0.0 stage=dependencies
+2026-07-10T02:06:08.359282Z  WARN bootstrap.log: stderr:  + charset-normalizer==3.4.4 stage=dependencies
+2026-07-10T02:06:08.359307Z  WARN bootstrap.log: stderr:  + click==8.3.1 stage=dependencies
+2026-07-10T02:06:08.359344Z  WARN bootstrap.log: stderr:  + colorama==0.4.6 stage=dependencies
+2026-07-10T02:06:08.359368Z  WARN bootstrap.log: stderr:  + concurrent-log-handler==0.9.29 stage=dependencies
+2026-07-10T02:06:08.359460Z  WARN bootstrap.log: stderr:  + croniter==6.0.0 stage=dependencies
+2026-07-10T02:06:08.359872Z  WARN bootstrap.log: stderr:  + cryptography==46.0.7 stage=dependencies
+2026-07-10T02:06:08.360692Z  WARN bootstrap.log: stderr:  + defusedxml==0.7.1 stage=dependencies
+2026-07-10T02:06:08.361380Z  WARN bootstrap.log: stderr:  + distro==1.9.0 stage=dependencies
+2026-07-10T02:06:08.388553Z  WARN bootstrap.log: stderr:  + fastapi==0.133.1 stage=dependencies
+2026-07-10T02:06:08.388598Z  WARN bootstrap.log: stderr:  + fire==0.7.1 stage=dependencies
+2026-07-10T02:06:08.388630Z  WARN bootstrap.log: stderr:  + frozenlist==1.8.0 stage=dependencies
+2026-07-10T02:06:08.388653Z  WARN bootstrap.log: stderr:  + google-api-core==2.30.3 stage=dependencies
+2026-07-10T02:06:08.388671Z  WARN bootstrap.log: stderr:  + google-api-python-client==2.194.0 stage=dependencies
+2026-07-10T02:06:08.388692Z  WARN bootstrap.log: stderr:  + google-auth==2.55.1 stage=dependencies
+2026-07-10T02:06:08.388711Z  WARN bootstrap.log: stderr:  + google-auth-httplib2==0.3.1 stage=dependencies
+2026-07-10T02:06:08.388737Z  WARN bootstrap.log: stderr:  + google-auth-oauthlib==1.3.1 stage=dependencies
+2026-07-10T02:06:08.388764Z  WARN bootstrap.log: stderr:  + googleapis-common-protos==1.73.0 stage=dependencies
+2026-07-10T02:06:08.388792Z  WARN bootstrap.log: stderr:  + h11==0.16.0 stage=dependencies
+2026-07-10T02:06:08.388851Z  WARN bootstrap.log: stderr:  + hermes-agent==0.18.2 (from file:///C:/Users/Arismendy/AppData/Local/hermes/hermes-agent) stage=dependencies
+2026-07-10T02:06:08.388877Z  WARN bootstrap.log: stderr:  + httpcore==1.0.9 stage=dependencies
+2026-07-10T02:06:08.388899Z  WARN bootstrap.log: stderr:  + httplib2==0.31.2 stage=dependencies
+2026-07-10T02:06:08.388920Z  WARN bootstrap.log: stderr:  + httptools==0.7.1 stage=dependencies
+2026-07-10T02:06:08.388939Z  WARN bootstrap.log: stderr:  + httpx==0.28.1 stage=dependencies
+2026-07-10T02:06:08.388963Z  WARN bootstrap.log: stderr:  + httpx-sse==0.4.3 stage=dependencies
+2026-07-10T02:06:08.388987Z  WARN bootstrap.log: stderr:  + idna==3.15 stage=dependencies
+2026-07-10T02:06:08.389009Z  WARN bootstrap.log: stderr:  + jinja2==3.1.6 stage=dependencies
+2026-07-10T02:06:08.389032Z  WARN bootstrap.log: stderr:  + jiter==0.13.0 stage=dependencies
+2026-07-10T02:06:08.389063Z  WARN bootstrap.log: stderr:  + jsonschema==4.26.0 stage=dependencies
+2026-07-10T02:06:08.389085Z  WARN bootstrap.log: stderr:  + jsonschema-specifications==2025.9.1 stage=dependencies
+2026-07-10T02:06:08.389115Z  WARN bootstrap.log: stderr:  + markdown==3.10.2 stage=dependencies
+2026-07-10T02:06:08.389142Z  WARN bootstrap.log: stderr:  + markdown-it-py==4.0.0 stage=dependencies
+2026-07-10T02:06:08.389168Z  WARN bootstrap.log: stderr:  + markupsafe==3.0.3 stage=dependencies
+2026-07-10T02:06:08.389198Z  WARN bootstrap.log: stderr:  + mcp==1.26.0 stage=dependencies
+2026-07-10T02:06:08.389217Z  WARN bootstrap.log: stderr:  + mdurl==0.1.2 stage=dependencies
+2026-07-10T02:06:08.389252Z  WARN bootstrap.log: stderr:  + multidict==6.7.1 stage=dependencies
+2026-07-10T02:06:08.389283Z  WARN bootstrap.log: stderr:  + oauthlib==3.3.1 stage=dependencies
+2026-07-10T02:06:08.389300Z  WARN bootstrap.log: stderr:  + openai==2.24.0 stage=dependencies
+2026-07-10T02:06:08.389332Z  WARN bootstrap.log: stderr:  + packaging==26.0 stage=dependencies
+2026-07-10T02:06:08.407877Z  WARN bootstrap.log: stderr:  + pathspec==1.1.1 stage=dependencies
+2026-07-10T02:06:08.408111Z  WARN bootstrap.log: stderr:  + pillow==12.2.0 stage=dependencies
+2026-07-10T02:06:08.408150Z  WARN bootstrap.log: stderr:  + portalocker==3.2.0 stage=dependencies
+2026-07-10T02:06:08.408177Z  WARN bootstrap.log: stderr:  + prompt-toolkit==3.0.52 stage=dependencies
+2026-07-10T02:06:08.408598Z  WARN bootstrap.log: stderr:  + propcache==0.4.1 stage=dependencies
+2026-07-10T02:06:08.409947Z  WARN bootstrap.log: stderr:  + proto-plus==1.27.2 stage=dependencies
+2026-07-10T02:06:08.411429Z  WARN bootstrap.log: stderr:  + protobuf==6.33.5 stage=dependencies
+2026-07-10T02:06:08.422589Z  WARN bootstrap.log: stderr:  + psutil==7.2.2 stage=dependencies
+2026-07-10T02:06:08.424598Z  WARN bootstrap.log: stderr:  + pyasn1==0.6.3 stage=dependencies
+2026-07-10T02:06:08.427620Z  WARN bootstrap.log: stderr:  + pyasn1-modules==0.4.2 stage=dependencies
+2026-07-10T02:06:08.429535Z  WARN bootstrap.log: stderr:  + pycparser==3.0 stage=dependencies
+2026-07-10T02:06:08.434097Z  WARN bootstrap.log: stderr:  + pydantic==2.13.4 stage=dependencies
+2026-07-10T02:06:08.437143Z  WARN bootstrap.log: stderr:  + pydantic-core==2.46.4 stage=dependencies
+2026-07-10T02:06:08.439996Z  WARN bootstrap.log: stderr:  + pydantic-settings==2.13.1 stage=dependencies
+2026-07-10T02:06:08.444068Z  WARN bootstrap.log: stderr:  + pygments==2.19.2 stage=dependencies
+2026-07-10T02:06:08.446505Z  WARN bootstrap.log: stderr:  + pyjwt==2.13.0 stage=dependencies
+2026-07-10T02:06:08.450494Z  WARN bootstrap.log: stderr:  + pyparsing==3.3.2 stage=dependencies
+2026-07-10T02:06:08.452304Z  WARN bootstrap.log: stderr:  + python-dateutil==2.9.0.post0 stage=dependencies
+2026-07-10T02:06:08.454029Z  WARN bootstrap.log: stderr:  + python-dotenv==1.2.2 stage=dependencies
+2026-07-10T02:06:08.457292Z  WARN bootstrap.log: stderr:  + python-multipart==0.0.27 stage=dependencies
+2026-07-10T02:06:08.459388Z  WARN bootstrap.log: stderr:  + pytz==2025.2 stage=dependencies
+2026-07-10T02:06:08.460925Z  WARN bootstrap.log: stderr:  + pywin32==311 stage=dependencies
+2026-07-10T02:06:08.462577Z  WARN bootstrap.log: stderr:  + pywinpty==2.0.15 stage=dependencies
+2026-07-10T02:06:08.464124Z  WARN bootstrap.log: stderr:  + pyyaml==6.0.3 stage=dependencies
+2026-07-10T02:06:08.467170Z  WARN bootstrap.log: stderr:  + referencing==0.37.0 stage=dependencies
+2026-07-10T02:06:08.468660Z  WARN bootstrap.log: stderr:  + requests==2.33.0 stage=dependencies
+2026-07-10T02:06:08.470336Z  WARN bootstrap.log: stderr:  + requests-oauthlib==2.0.0 stage=dependencies
+2026-07-10T02:06:08.473167Z  WARN bootstrap.log: stderr:  + rich==14.3.3 stage=dependencies
+2026-07-10T02:06:08.475039Z  WARN bootstrap.log: stderr:  + rpds-py==0.30.0 stage=dependencies
+2026-07-10T02:06:08.476851Z  WARN bootstrap.log: stderr:  + ruamel-yaml==0.18.17 stage=dependencies
+2026-07-10T02:06:08.479117Z  WARN bootstrap.log: stderr:  + ruamel-yaml-clib==0.2.15 stage=dependencies
+2026-07-10T02:06:08.480949Z  WARN bootstrap.log: stderr:  + simple-term-menu==1.6.6 stage=dependencies
+2026-07-10T02:06:08.485433Z  WARN bootstrap.log: stderr:  + six==1.17.0 stage=dependencies
+2026-07-10T02:06:08.487817Z  WARN bootstrap.log: stderr:  + sniffio==1.3.1 stage=dependencies
+2026-07-10T02:06:08.490787Z  WARN bootstrap.log: stderr:  + socksio==1.0.0 stage=dependencies
+2026-07-10T02:06:08.492669Z  WARN bootstrap.log: stderr:  + sse-starlette==3.3.2 stage=dependencies
+2026-07-10T02:06:08.495309Z  WARN bootstrap.log: stderr:  + starlette==1.0.1 stage=dependencies
+2026-07-10T02:06:08.497137Z  WARN bootstrap.log: stderr:  + tenacity==9.1.4 stage=dependencies
+2026-07-10T02:06:08.504094Z  WARN bootstrap.log: stderr:  + termcolor==3.3.0 stage=dependencies
+2026-07-10T02:06:08.507187Z  WARN bootstrap.log: stderr:  + tqdm==4.67.3 stage=dependencies
+2026-07-10T02:06:08.508806Z  WARN bootstrap.log: stderr:  + typing-extensions==4.15.0 stage=dependencies
+2026-07-10T02:06:08.510258Z  WARN bootstrap.log: stderr:  + typing-inspection==0.4.2 stage=dependencies
+2026-07-10T02:06:08.511496Z  WARN bootstrap.log: stderr:  + tzdata==2025.3 stage=dependencies
+2026-07-10T02:06:08.513006Z  WARN bootstrap.log: stderr:  + uritemplate==4.2.0 stage=dependencies
+2026-07-10T02:06:08.515951Z  WARN bootstrap.log: stderr:  + urllib3==2.7.0 stage=dependencies
+2026-07-10T02:06:08.517774Z  WARN bootstrap.log: stderr:  + uvicorn==0.41.0 stage=dependencies
+2026-07-10T02:06:08.519147Z  WARN bootstrap.log: stderr:  + watchfiles==1.1.1 stage=dependencies
+2026-07-10T02:06:08.521453Z  WARN bootstrap.log: stderr:  + wcwidth==0.6.0 stage=dependencies
+2026-07-10T02:06:08.523014Z  WARN bootstrap.log: stderr:  + websockets==15.0.1 stage=dependencies
+2026-07-10T02:06:08.524665Z  WARN bootstrap.log: stderr:  + yarl==1.22.0 stage=dependencies
+2026-07-10T02:06:08.526018Z  WARN bootstrap.log: stderr:  + youtube-transcript-api==1.2.4 stage=dependencies
+2026-07-10T02:06:08.587826Z  INFO bootstrap.log: [OK] Main package installed (hash-verified via uv.lock) stage=dependencies
+2026-07-10T02:06:26.832448Z  INFO bootstrap.log: [OK] Baseline imports verified in venv stage=dependencies
+2026-07-10T02:06:34.203857Z  INFO bootstrap.log: [OK] All dependencies installed stage=dependencies
+2026-07-10T02:06:34.487419Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":37340,"stage":"dependencies"} stage=dependencies
+2026-07-10T02:06:34.835876Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=dependencies state=Succeeded duration_ms=Some(39981) error=None
+2026-07-10T02:06:34.928738Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node-deps state=Running duration_ms=None error=None
+2026-07-10T02:06:37.864997Z  INFO bootstrap.log: -> Using npm.cmd (PowerShell execution policy blocks npm.ps1) stage=node-deps
+2026-07-10T02:06:37.870572Z  INFO bootstrap.log: -> Installing Node.js dependencies (browser tools)... stage=node-deps
+2026-07-10T02:10:14.190521Z  INFO bootstrap.log: [OK] Browser tools dependencies installed stage=node-deps
+2026-07-10T02:10:14.216529Z  INFO bootstrap.log: -> Installing browser engine (Playwright Chromium)... stage=node-deps
+2026-07-10T02:10:14.244641Z  INFO bootstrap.log: -> (this can take several minutes -- streaming progress below) stage=node-deps
+2026-07-10T02:10:25.274217Z  INFO bootstrap.log: ╔═══════════════════════════════════════════════════════════════════════════════╗ stage=node-deps
+2026-07-10T02:10:25.275600Z  INFO bootstrap.log: ║ WARNING: It looks like you are running 'npx playwright install' without first ║ stage=node-deps
+2026-07-10T02:10:25.278658Z  INFO bootstrap.log: ║ installing your project's dependencies.                                       ║ stage=node-deps
+2026-07-10T02:10:25.284032Z  INFO bootstrap.log: ║                                                                               ║ stage=node-deps
+2026-07-10T02:10:25.286453Z  INFO bootstrap.log: ║ To avoid unexpected behavior, please install your dependencies first, and     ║ stage=node-deps
+2026-07-10T02:10:25.291770Z  INFO bootstrap.log: ║ then run Playwright's install command:                                        ║ stage=node-deps
+2026-07-10T02:10:25.293568Z  INFO bootstrap.log: ║                                                                               ║ stage=node-deps
+2026-07-10T02:10:25.294763Z  INFO bootstrap.log: ║     npm install                                                               ║ stage=node-deps
+2026-07-10T02:10:25.302077Z  INFO bootstrap.log: ║     npx playwright install                                                    ║ stage=node-deps
+2026-07-10T02:10:25.311343Z  INFO bootstrap.log: ║                                                                               ║ stage=node-deps
+2026-07-10T02:10:25.314314Z  INFO bootstrap.log: ║ If your project does not yet depend on Playwright, first install the          ║ stage=node-deps
+2026-07-10T02:10:25.317603Z  INFO bootstrap.log: ║ applicable npm package (most commonly @playwright/test), and                  ║ stage=node-deps
+2026-07-10T02:10:25.320055Z  INFO bootstrap.log: ║ then run Playwright's install command to download the browsers:               ║ stage=node-deps
+2026-07-10T02:10:25.323245Z  INFO bootstrap.log: ║                                                                               ║ stage=node-deps
+2026-07-10T02:10:25.324654Z  INFO bootstrap.log: ║     npm install @playwright/test                                              ║ stage=node-deps
+2026-07-10T02:10:25.326561Z  INFO bootstrap.log: ║     npx playwright install                                                    ║ stage=node-deps
+2026-07-10T02:10:25.330136Z  INFO bootstrap.log: ║                                                                               ║ stage=node-deps
+2026-07-10T02:10:25.332736Z  INFO bootstrap.log: ╚═══════════════════════════════════════════════════════════════════════════════╝ stage=node-deps
+2026-07-10T02:10:25.340219Z  INFO bootstrap.log: Removing unused browser at C:\Users\Arismendy\AppData\Local\ms-playwright\chromium-1208 stage=node-deps
+2026-07-10T02:10:25.343857Z  INFO bootstrap.log: Removing unused browser at C:\Users\Arismendy\AppData\Local\ms-playwright\chromium_headless_shell-1208 stage=node-deps
+2026-07-10T02:10:25.550580Z  INFO bootstrap.log: Downloading Chrome for Testing 149.0.7827.55 (playwright chromium v1228)\x1b[2m from https://cdn.playwright.dev/builds/cft/149.0.7827.55/win64/chrome-win64.zip\x1b[22m stage=node-deps
+2026-07-10T02:10:27.724925Z  INFO bootstrap.log: |                                                                                |   0% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:31.828970Z  INFO bootstrap.log: |■■■■■■■■                                                                        |  10% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:35.999860Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■                                                                |  20% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:40.274348Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:44.544400Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:48.665788Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:52.968023Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 183.6 MiB stage=node-deps
+2026-07-10T02:10:57.075054Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 183.6 MiB stage=node-deps
+2026-07-10T02:11:01.283450Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 183.6 MiB stage=node-deps
+2026-07-10T02:11:05.532261Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 183.6 MiB stage=node-deps
+2026-07-10T02:11:09.750165Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 183.6 MiB stage=node-deps
+2026-07-10T02:11:18.682410Z  INFO bootstrap.log: Chrome for Testing 149.0.7827.55 (playwright chromium v1228) downloaded to C:\Users\Arismendy\AppData\Local\ms-playwright\chromium-1228 stage=node-deps
+2026-07-10T02:11:18.685050Z  INFO bootstrap.log: Downloading Chrome Headless Shell 149.0.7827.55 (playwright chromium-headless-shell v1228)\x1b[2m from https://cdn.playwright.dev/builds/cft/149.0.7827.55/win64/chrome-headless-shell-win64.zip\x1b[22m stage=node-deps
+2026-07-10T02:11:20.573686Z  INFO bootstrap.log: |                                                                                |   0% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:23.242722Z  INFO bootstrap.log: |■■■■■■■■                                                                        |  10% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:25.673552Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■                                                                |  20% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:28.374285Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:30.929992Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:33.585836Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:36.094442Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:38.684285Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:41.219673Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:43.969498Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:46.423956Z  INFO bootstrap.log: |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 113.6 MiB stage=node-deps
+2026-07-10T02:11:53.739510Z  INFO bootstrap.log: Chrome Headless Shell 149.0.7827.55 (playwright chromium-headless-shell v1228) downloaded to C:\Users\Arismendy\AppData\Local\ms-playwright\chromium_headless_shell-1228 stage=node-deps
+2026-07-10T02:11:53.817377Z  INFO bootstrap.log: [OK] Playwright Chromium installed (browser tools ready) stage=node-deps
+2026-07-10T02:11:53.834390Z  INFO bootstrap.log: -> Installing TUI dependencies... stage=node-deps
+2026-07-10T02:12:06.769182Z  INFO bootstrap.log: [OK] TUI dependencies installed stage=node-deps
+2026-07-10T02:12:06.891988Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":329198,"stage":"node-deps"} stage=node-deps
+2026-07-10T02:12:06.934290Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=node-deps state=Succeeded duration_ms=Some(332005) error=None
+2026-07-10T02:12:06.934355Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=desktop state=Running duration_ms=None error=None
+2026-07-10T02:12:08.096699Z  INFO bootstrap.log: -> Checking Node.js (for browser tools)... stage=desktop
+2026-07-10T02:12:08.222982Z  INFO bootstrap.log: [OK] Node.js v22.20.0 found stage=desktop
+2026-07-10T02:12:08.244766Z  INFO bootstrap.log: -> Installing desktop workspace dependencies (this includes Electron ~150MB, takes 1-3min)... stage=desktop
+2026-07-10T02:13:19.100628Z  INFO bootstrap.log: npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful. stage=desktop
+2026-07-10T02:13:20.299929Z  INFO bootstrap.log: npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported stage=desktop
+2026-07-10T02:13:22.569583Z  INFO bootstrap.log: npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me stage=desktop
+2026-07-10T02:13:31.264991Z  INFO bootstrap.log: npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info. stage=desktop
+2026-07-10T02:13:36.251402Z  INFO bootstrap.log: npm warn deprecated rcedit@5.0.2: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info. stage=desktop
+2026-07-10T02:19:06.701131Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:06.703107Z  INFO bootstrap.log: > hermes-agent@1.0.0 postinstall stage=desktop
+2026-07-10T02:19:06.703422Z  INFO bootstrap.log: > echo '✅ Browser tools ready. Run: python run_agent.py --help' stage=desktop
+2026-07-10T02:19:06.705111Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:06.863186Z  INFO bootstrap.log: '✅ Browser tools ready. Run: python run_agent.py --help' stage=desktop
+2026-07-10T02:19:07.085979Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:07.087922Z  INFO bootstrap.log: added 1301 packages in 7m stage=desktop
+2026-07-10T02:19:07.087960Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:07.087984Z  INFO bootstrap.log: 357 packages are looking for funding stage=desktop
+2026-07-10T02:19:07.089145Z  INFO bootstrap.log:   run `npm fund` for details stage=desktop
+2026-07-10T02:19:07.157831Z  INFO bootstrap.log: [OK] Desktop workspace dependencies installed stage=desktop
+2026-07-10T02:19:07.164068Z  INFO bootstrap.log: -> Building desktop app (this takes 1-3 minutes)... stage=desktop
+2026-07-10T02:19:09.178254Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:09.179729Z  INFO bootstrap.log: > hermes@0.17.0 pack stage=desktop
+2026-07-10T02:19:09.180973Z  INFO bootstrap.log: > npm run build && npm run builder -- --dir stage=desktop
+2026-07-10T02:19:09.185151Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:11.165077Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:11.166830Z  INFO bootstrap.log: > hermes@0.17.0 build stage=desktop
+2026-07-10T02:19:11.166932Z  INFO bootstrap.log: > node scripts/assert-root-install.mjs && node scripts/write-build-stamp.mjs && tsc -b && vite build && node scripts/bundle-electron-main.mjs && node scripts/stage-native-deps.mjs stage=desktop
+2026-07-10T02:19:11.167001Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:19:12.160929Z  INFO bootstrap.log: [write-build-stamp] WARNING: working tree is dirty. stage=desktop
+2026-07-10T02:19:12.161527Z  INFO bootstrap.log:   Pinning to a7f65e3bcd93 but the packaged code may differ from that commit. stage=desktop
+2026-07-10T02:19:12.162329Z  INFO bootstrap.log:   Commit your changes before publishing this build. stage=desktop
+2026-07-10T02:19:12.165755Z  INFO bootstrap.log: [write-build-stamp] wrote apps\desktop\build\install-stamp.json -> a7f65e3bcd93 (main) [DIRTY] stage=desktop
+2026-07-10T02:20:44.751210Z  INFO bootstrap.log: \x1b[36mvite v8.1.0 \x1b[32mbuilding client environment for production...\x1b[36m\x1b[39m stage=desktop
+2026-07-10T02:20:44.784096Z  INFO bootstrap.log: \x1b[2K stage=desktop
+2026-07-10T02:20:50.338516Z  INFO bootstrap.log: Found 1 warning while optimizing generated CSS: stage=desktop
+2026-07-10T02:20:50.399756Z  INFO bootstrap.log: System.Management.Automation.RemoteException stage=desktop
+2026-07-10T02:20:50.416137Z  INFO bootstrap.log: \x1b[2m│   -moz-tab-size: 2;\x1b[22m stage=desktop
+2026-07-10T02:20:50.485659Z  INFO bootstrap.log: \x1b[2m│ }\x1b[22m stage=desktop
+2026-07-10T02:20:50.544753Z  INFO bootstrap.log: \x1b[2m│\x1b[22m text-* variant utilities. */ .btn-arc { stage=desktop
+2026-07-10T02:20:50.593884Z  INFO bootstrap.log: \x1b[2m┆\x1b[22m      \x1b[33m\x1b[2m^--\x1b[22m Unexpected token Delim('*')\x1b[39m stage=desktop
+2026-07-10T02:20:50.638392Z  INFO bootstrap.log: \x1b[2m┆\x1b[22m stage=desktop
+2026-07-10T02:20:50.656505Z  INFO bootstrap.log: \x1b[2m│   background-image: linear-gradient(110deg, #5b6cff 0%, #8b5cf6 28%, #d946ef 58%, #fb7185 82%, #fb923c 100%);\x1b[22m stage=desktop
+2026-07-10T02:20:50.730889Z  INFO bootstrap.log: \x1b[2m│   color: #fff;\x1b[22m stage=desktop
+2026-07-10T02:20:50.779632Z  INFO bootstrap.log: System.Management.Automation.RemoteException stage=desktop
+2026-07-10T02:20:50.827587Z  INFO bootstrap.log: transforming...\x1b[38;5;147m[LARGE_BARREL_MODULES] \x1b[0m../../node_modules/@tabler/icons-react/dist/esm/tabler-icons-react.mjs has 6149 re-exports. Eagerly resolving every entry can significantly slow down the build. Consider using `@rolldown/plugin-transform-imports` to rewrite imports at the source level so the barrel file is never loaded. stage=desktop
+2026-07-10T02:20:50.848545Z  INFO bootstrap.log:  \x1b[38;5;240m │\x1b[0m  stage=desktop
+2026-07-10T02:20:50.964243Z  INFO bootstrap.log:  \x1b[38;5;240m │\x1b[0m \x1b[38;5;115mHelp\x1b[0m: See https://github.com/rolldown/plugins/tree/main/packages/transform-imports for usage. stage=desktop
+2026-07-10T02:20:50.979166Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:20:56.278009Z  INFO bootstrap.log: ✓ 4295 modules transformed. stage=desktop
+2026-07-10T02:20:59.695336Z  INFO bootstrap.log: rendering chunks... stage=desktop
+2026-07-10T02:21:06.075256Z  INFO bootstrap.log: computing gzip size... stage=desktop
+2026-07-10T02:21:06.771144Z  INFO bootstrap.log: dist/index.html                                            1.81 kB │ gzip:     0.83 kB stage=desktop
+2026-07-10T02:21:06.772177Z  INFO bootstrap.log: dist/assets/KaTeX_Size3-Regular-CTq5MqoE.woff              4.42 kB stage=desktop
+2026-07-10T02:21:06.773883Z  INFO bootstrap.log: dist/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2             4.92 kB stage=desktop
+2026-07-10T02:21:06.807578Z  INFO bootstrap.log: dist/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2             5.20 kB stage=desktop
+2026-07-10T02:21:06.808750Z  INFO bootstrap.log: dist/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2             5.46 kB stage=desktop
+2026-07-10T02:21:06.810016Z  INFO bootstrap.log: dist/assets/KaTeX_Size4-Regular-BF-4gkZK.woff              5.98 kB stage=desktop
+2026-07-10T02:21:06.813331Z  INFO bootstrap.log: dist/assets/KaTeX_Size2-Regular-oD1tc_U0.woff              6.18 kB stage=desktop
+2026-07-10T02:21:06.815053Z  INFO bootstrap.log: dist/assets/KaTeX_Size1-Regular-C195tn64.woff              6.49 kB stage=desktop
+2026-07-10T02:21:06.816749Z  INFO bootstrap.log: dist/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2       6.90 kB stage=desktop
+2026-07-10T02:21:06.817816Z  INFO bootstrap.log: dist/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2          6.91 kB stage=desktop
+2026-07-10T02:21:06.819275Z  INFO bootstrap.log: dist/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf               7.58 kB stage=desktop
+2026-07-10T02:21:06.820255Z  INFO bootstrap.log: dist/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff        7.65 kB stage=desktop
+2026-07-10T02:21:06.821509Z  INFO bootstrap.log: dist/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff           7.71 kB stage=desktop
+2026-07-10T02:21:06.822542Z  INFO bootstrap.log: dist/assets/KaTeX_Script-Regular-D3wIWfF6.woff2            9.64 kB stage=desktop
+2026-07-10T02:21:06.824971Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2        10.34 kB stage=desktop
+2026-07-10T02:21:06.828593Z  INFO bootstrap.log: dist/assets/KaTeX_Size4-Regular-DWFBv043.ttf              10.36 kB stage=desktop
+2026-07-10T02:21:06.830654Z  INFO bootstrap.log: dist/assets/KaTeX_Script-Regular-D5yQViql.woff            10.58 kB stage=desktop
+2026-07-10T02:21:06.831518Z  INFO bootstrap.log: dist/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2          11.31 kB stage=desktop
+2026-07-10T02:21:06.832758Z  INFO bootstrap.log: dist/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2             11.34 kB stage=desktop
+2026-07-10T02:21:06.834503Z  INFO bootstrap.log: dist/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf              11.50 kB stage=desktop
+2026-07-10T02:21:06.836849Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2         12.02 kB stage=desktop
+2026-07-10T02:21:06.837781Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2           12.21 kB stage=desktop
+2026-07-10T02:21:06.838946Z  INFO bootstrap.log: dist/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf              12.22 kB stage=desktop
+2026-07-10T02:21:06.840970Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff         12.31 kB stage=desktop
+2026-07-10T02:21:06.842039Z  INFO bootstrap.log: dist/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf        12.34 kB stage=desktop
+2026-07-10T02:21:06.843005Z  INFO bootstrap.log: dist/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf           12.36 kB stage=desktop
+2026-07-10T02:21:06.845844Z  INFO bootstrap.log: dist/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff           13.20 kB stage=desktop
+2026-07-10T02:21:06.846516Z  INFO bootstrap.log: dist/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff              13.29 kB stage=desktop
+2026-07-10T02:21:06.847306Z  INFO bootstrap.log: dist/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2       13.56 kB stage=desktop
+2026-07-10T02:21:06.848669Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff          14.11 kB stage=desktop
+2026-07-10T02:21:06.849492Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff            14.40 kB stage=desktop
+2026-07-10T02:21:06.850394Z  INFO bootstrap.log: dist/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff        16.02 kB stage=desktop
+2026-07-10T02:21:06.851212Z  INFO bootstrap.log: dist/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2          16.40 kB stage=desktop
+2026-07-10T02:21:06.852187Z  INFO bootstrap.log: dist/assets/KaTeX_Math-Italic-t53AETM-.woff2              16.44 kB stage=desktop
+2026-07-10T02:21:06.853452Z  INFO bootstrap.log: dist/assets/KaTeX_Script-Regular-C5JkGWo-.ttf             16.64 kB stage=desktop
+2026-07-10T02:21:06.855643Z  INFO bootstrap.log: dist/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2          16.78 kB stage=desktop
+2026-07-10T02:21:06.856203Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2              16.98 kB stage=desktop
+2026-07-10T02:21:06.857256Z  INFO bootstrap.log: dist/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff           18.66 kB stage=desktop
+2026-07-10T02:21:06.858170Z  INFO bootstrap.log: dist/assets/KaTeX_Math-Italic-DA0__PXp.woff               18.74 kB stage=desktop
+2026-07-10T02:21:06.859063Z  INFO bootstrap.log: dist/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff           19.41 kB stage=desktop
+2026-07-10T02:21:06.861924Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf          19.43 kB stage=desktop
+2026-07-10T02:21:06.863135Z  INFO bootstrap.log: dist/assets/KaTeX_Fraktur-Regular-CB_wures.ttf            19.57 kB stage=desktop
+2026-07-10T02:21:06.864159Z  INFO bootstrap.log: dist/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf               19.58 kB stage=desktop
+2026-07-10T02:21:06.865242Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Italic-BMLOBm91.woff               19.67 kB stage=desktop
+2026-07-10T02:21:06.866166Z  INFO bootstrap.log: \x1b[33m\x1b[33m[PLUGIN_TIMINGS] \x1b[0mYour build spent significant time in plugins. Here is a breakdown: stage=desktop
+2026-07-10T02:21:06.867169Z  INFO bootstrap.log:   - rolldown:vite-resolve (44%) stage=desktop
+2026-07-10T02:21:06.868190Z  INFO bootstrap.log:   - @tailwindcss/vite:generate:build (16%) stage=desktop
+2026-07-10T02:21:06.869240Z  INFO bootstrap.log:   - vite:css (9%) stage=desktop
+2026-07-10T02:21:06.871207Z  INFO bootstrap.log:   - vite:asset (9%) stage=desktop
+2026-07-10T02:21:06.872302Z  INFO bootstrap.log:   - vite:asset-import-meta-url (6%) stage=desktop
+2026-07-10T02:21:06.873280Z  INFO bootstrap.log: See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details. stage=desktop
+2026-07-10T02:21:06.874391Z  INFO bootstrap.log: \x1b[39m stage=desktop
+2026-07-10T02:21:06.875572Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf           22.36 kB stage=desktop
+2026-07-10T02:21:06.876487Z  INFO bootstrap.log: dist/assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf             24.50 kB stage=desktop
+2026-07-10T02:21:06.879282Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Bold-Cx986IdX.woff2                25.32 kB stage=desktop
+2026-07-10T02:21:06.880322Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Regular-B22Nviop.woff2             26.27 kB stage=desktop
+2026-07-10T02:21:06.881379Z  INFO bootstrap.log: dist/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf         27.55 kB stage=desktop
+2026-07-10T02:21:06.882432Z  INFO bootstrap.log: dist/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2              28.07 kB stage=desktop
+2026-07-10T02:21:06.883393Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Bold-Jm3AIy58.woff                 29.91 kB stage=desktop
+2026-07-10T02:21:06.884396Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Regular-Dr94JaBh.woff              30.77 kB stage=desktop
+2026-07-10T02:21:06.888577Z  INFO bootstrap.log: dist/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf            31.19 kB stage=desktop
+2026-07-10T02:21:06.890694Z  INFO bootstrap.log: dist/assets/KaTeX_Math-Italic-flOr_0UB.ttf                31.30 kB stage=desktop
+2026-07-10T02:21:06.892674Z  INFO bootstrap.log: dist/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf            32.96 kB stage=desktop
+2026-07-10T02:21:06.896299Z  INFO bootstrap.log: dist/assets/KaTeX_AMS-Regular-DMm9YOAa.woff               33.51 kB stage=desktop
+2026-07-10T02:21:06.897863Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Italic-3WenGoN9.ttf                33.58 kB stage=desktop
+2026-07-10T02:21:06.899044Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Bold-waoOVXN0.ttf                  51.33 kB stage=desktop
+2026-07-10T02:21:06.899809Z  INFO bootstrap.log: dist/assets/KaTeX_Main-Regular-ypZvNtVU.ttf               53.58 kB stage=desktop
+2026-07-10T02:21:06.901973Z  INFO bootstrap.log: dist/assets/Collapse-Bold-mgICk9-_.woff2                  59.14 kB stage=desktop
+2026-07-10T02:21:06.902692Z  INFO bootstrap.log: dist/assets/KaTeX_AMS-Regular-DRggAlZN.ttf                63.63 kB stage=desktop
+2026-07-10T02:21:06.903548Z  INFO bootstrap.log: dist/assets/JetBrainsMono-Regular-CA-Os4ii.woff2          92.38 kB stage=desktop
+2026-07-10T02:21:06.904623Z  INFO bootstrap.log: dist/assets/JetBrainsMono-Bold-CUogYd9I.woff2             94.62 kB stage=desktop
+2026-07-10T02:21:06.905025Z  INFO bootstrap.log: dist/assets/JetBrainsMono-Italic-LIR7wr3B.woff2           96.42 kB stage=desktop
+2026-07-10T02:21:06.906732Z  INFO bootstrap.log: dist/assets/codicon-DjkITdqj.ttf                         125.82 kB stage=desktop
+2026-07-10T02:21:06.908030Z  INFO bootstrap.log: dist/assets/index-B0YuAZBj.css                           308.55 kB │ gzip:    51.94 kB stage=desktop
+2026-07-10T02:21:06.909148Z  INFO bootstrap.log: dist/assets/index-BHbP3SW8.js                         27,795.91 kB │ gzip: 5,965.61 kB stage=desktop
+2026-07-10T02:21:06.910013Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:06.913409Z  INFO bootstrap.log: \x1b[33m[plugin builtin:vite-reporter]  stage=desktop
+2026-07-10T02:21:06.914454Z  INFO bootstrap.log: (!) Some chunks are larger than 25000 kB after minification. Consider: stage=desktop
+2026-07-10T02:21:06.915867Z  INFO bootstrap.log: - Using dynamic import() to code-split the application stage=desktop
+2026-07-10T02:21:06.917072Z  INFO bootstrap.log: - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting stage=desktop
+2026-07-10T02:21:06.918319Z  INFO bootstrap.log: - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\x1b[39m stage=desktop
+2026-07-10T02:21:06.919299Z  INFO bootstrap.log: \x1b[32m✓ built in 22.02s\x1b[39m stage=desktop
+2026-07-10T02:21:08.373051Z  INFO bootstrap.log: System.Management.Automation.RemoteException stage=desktop
+2026-07-10T02:21:08.374065Z  INFO bootstrap.log:   dist\electron-main.mjs  460.3kb stage=desktop
+2026-07-10T02:21:08.375202Z  INFO bootstrap.log: System.Management.Automation.RemoteException stage=desktop
+2026-07-10T02:21:08.378167Z  INFO bootstrap.log: Done in 1069ms stage=desktop
+2026-07-10T02:21:08.384449Z  INFO bootstrap.log: bundled C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\dist\electron-main.mjs stage=desktop
+2026-07-10T02:21:08.433113Z  INFO bootstrap.log: System.Management.Automation.RemoteException stage=desktop
+2026-07-10T02:21:08.435037Z  INFO bootstrap.log:   dist\electron-preload.js  15.5kb stage=desktop
+2026-07-10T02:21:08.437140Z  INFO bootstrap.log: System.Management.Automation.RemoteException stage=desktop
+2026-07-10T02:21:08.444189Z  INFO bootstrap.log: Done in 19ms stage=desktop
+2026-07-10T02:21:08.468478Z  INFO bootstrap.log: bundled C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\dist\electron-preload.js stage=desktop
+2026-07-10T02:21:09.385945Z  INFO bootstrap.log: [stage-native-deps] staged node-pty (win32-x64) -> C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\dist\node_modules\node-pty stage=desktop
+2026-07-10T02:21:09.414570Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:09.417264Z  INFO bootstrap.log: > hermes@0.17.0 postbuild stage=desktop
+2026-07-10T02:21:09.417295Z  INFO bootstrap.log: > node scripts/assert-dist-built.mjs stage=desktop
+2026-07-10T02:21:09.417331Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:09.711614Z  INFO bootstrap.log: ✓ assert-dist-built: dist/index.html + assets present stage=desktop
+2026-07-10T02:21:11.515855Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:11.517852Z  INFO bootstrap.log: > hermes@0.17.0 prebuilder stage=desktop
+2026-07-10T02:21:11.519547Z  INFO bootstrap.log: > node scripts/patch-electron-builder-mac-binary.mjs stage=desktop
+2026-07-10T02:21:11.521164Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:11.821759Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:11.826178Z  INFO bootstrap.log: > hermes@0.17.0 builder stage=desktop
+2026-07-10T02:21:11.826900Z  INFO bootstrap.log: > cross-env NODE_OPTIONS=--max-old-space-size=16384 node scripts/run-electron-builder.mjs --dir stage=desktop
+2026-07-10T02:21:11.827854Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:18.524893Z  INFO bootstrap.log:   • electron-builder  version=26.15.3 os=10.0.22621 stage=desktop
+2026-07-10T02:21:18.706355Z  INFO bootstrap.log:   • loaded configuration  file=package.json ("build" field) stage=desktop
+2026-07-10T02:21:18.716104Z  INFO bootstrap.log:   • @electron/rebuild already used by electron-builder, please consider to remove excess dependency from devDependencies stage=desktop
+2026-07-10T02:21:18.716881Z  INFO bootstrap.log:  stage=desktop
+2026-07-10T02:21:18.720415Z  INFO bootstrap.log: To ensure your native dependencies are always matched electron version, simply add script `"postinstall": "electron-builder install-app-deps" to your `package.json` stage=desktop
+2026-07-10T02:21:20.324118Z  INFO bootstrap.log:   • packageManager not detected by file, falling back to environment detection  resolvedPackageManager=npm detected=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop stage=desktop
+2026-07-10T02:21:22.121858Z  INFO bootstrap.log:   • detected workspace root for project using lock file  pm=npm config=undefined resolved=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent projectDir=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop stage=desktop
+2026-07-10T02:21:22.810718Z  INFO bootstrap.log: [stage-native-deps] staged node-pty (win32-x64) -> C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\dist\node_modules\node-pty stage=desktop
+2026-07-10T02:21:22.811730Z  INFO bootstrap.log: [before-pack] re-staged node-pty for target win32-x64 stage=desktop
+2026-07-10T02:21:22.813449Z  INFO bootstrap.log:   • packaging       platform=win32 arch=x64 electron=40.10.2 appOutDir=release\win-unpacked stage=desktop
+2026-07-10T02:21:22.817286Z  INFO bootstrap.log:   • using custom unpacked Electron distribution  electronDist=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\node_modules\electron\dist stage=desktop
+2026-07-10T02:21:22.818437Z  INFO bootstrap.log:   • copying unpacked Electron  source=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\node_modules\electron\dist destination=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked stage=desktop
+2026-07-10T02:21:28.301004Z  INFO bootstrap.log:   • updating asar integrity executable resource  executablePath=release\win-unpacked\Hermes.exe stage=desktop
+2026-07-10T02:21:28.312920Z  INFO bootstrap.log: [set-exe-identity] stamping C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\Hermes.exe stage=desktop
+2026-07-10T02:21:28.314823Z  INFO bootstrap.log: [set-exe-identity] icon: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\assets\icon.ico stage=desktop
+2026-07-10T02:21:30.172017Z  INFO bootstrap.log: [set-exe-identity] done — Hermes icon + identity stamped stage=desktop
+2026-07-10T02:21:30.199141Z  INFO bootstrap.log:   • executable resource editing and code signing skipped — signAndEditExecutable is false. To skip only code signing while keeping icon and metadata applied, use signExecutable: false instead.  exe=release\win-unpacked\Hermes.exe stage=desktop
+2026-07-10T02:21:30.199456Z  INFO bootstrap.log:   • skipping "afterSign" hook as no signing occurred, perhaps you intended "afterPack"? stage=desktop
+2026-07-10T02:21:30.765870Z  INFO bootstrap.log: [OK] Desktop app built stage=desktop
+2026-07-10T02:21:30.836799Z  INFO bootstrap.log: [OK] Desktop ready: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\Hermes.exe stage=desktop
+2026-07-10T02:21:46.770138Z  INFO bootstrap.log: [OK] Shortcut created: C:\Users\Arismendy\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Hermes.lnk stage=desktop
+2026-07-10T02:21:46.816406Z  INFO bootstrap.log: [OK] Shortcut created: C:\Users\Arismendy\OneDrive\Escritorio\Hermes.lnk stage=desktop
+2026-07-10T02:21:47.004452Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":578829,"stage":"desktop"} stage=desktop
+2026-07-10T02:21:47.180223Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=desktop state=Succeeded duration_ms=Some(580245) error=None
+2026-07-10T02:21:47.180316Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=path state=Running duration_ms=None error=None
+2026-07-10T02:21:49.485826Z  INFO bootstrap.log: -> Setting up hermes command... stage=path
+2026-07-10T02:21:50.654508Z  INFO bootstrap.log: [OK] Added to user PATH: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\venv\Scripts stage=path
+2026-07-10T02:21:50.712569Z  INFO bootstrap.log: [OK] hermes command ready stage=path
+2026-07-10T02:21:50.887140Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":1372,"stage":"path"} stage=path
+2026-07-10T02:21:50.951266Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=path state=Succeeded duration_ms=Some(3770) error=None
+2026-07-10T02:21:50.951357Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=config-templates state=Running duration_ms=None error=None
+2026-07-10T02:21:52.349071Z  INFO bootstrap.log: -> Setting up configuration files... stage=config-templates
+2026-07-10T02:21:52.399080Z  INFO bootstrap.log: -> C:\Users\Arismendy\AppData\Local\hermes\.env already exists, keeping it stage=config-templates
+2026-07-10T02:21:52.403968Z  INFO bootstrap.log: -> C:\Users\Arismendy\AppData\Local\hermes\config.yaml already exists, keeping it stage=config-templates
+2026-07-10T02:21:52.413438Z  INFO bootstrap.log: [OK] Configuration directory ready: C:\Users\Arismendy\AppData\Local\hermes stage=config-templates
+2026-07-10T02:21:52.422364Z  INFO bootstrap.log: -> Syncing bundled skills to C:\Users\Arismendy\AppData\Local\hermes\skills ... stage=config-templates
+2026-07-10T02:21:58.297408Z  INFO bootstrap.log: Syncing bundled skills into ~/.hermes/skills/ ... stage=config-templates
+2026-07-10T02:21:58.297460Z  INFO bootstrap.log:   + apple-notes stage=config-templates
+2026-07-10T02:21:58.297485Z  INFO bootstrap.log:   + apple-reminders stage=config-templates
+2026-07-10T02:21:58.297505Z  INFO bootstrap.log:   + findmy stage=config-templates
+2026-07-10T02:21:58.297524Z  INFO bootstrap.log:   + imessage stage=config-templates
+2026-07-10T02:21:58.297547Z  INFO bootstrap.log:   + claude-code stage=config-templates
+2026-07-10T02:21:58.297600Z  INFO bootstrap.log:   + codex stage=config-templates
+2026-07-10T02:21:58.297643Z  INFO bootstrap.log:   + hermes-agent stage=config-templates
+2026-07-10T02:21:58.297668Z  INFO bootstrap.log:   + opencode stage=config-templates
+2026-07-10T02:21:58.297719Z  INFO bootstrap.log:   + computer-use stage=config-templates
+2026-07-10T02:21:58.298000Z  INFO bootstrap.log:   + architecture-diagram stage=config-templates
+2026-07-10T02:21:58.298068Z  INFO bootstrap.log:   + ascii-art stage=config-templates
+2026-07-10T02:21:58.299389Z  INFO bootstrap.log:   + ascii-video stage=config-templates
+2026-07-10T02:21:58.299425Z  INFO bootstrap.log:   + baoyu-infographic stage=config-templates
+2026-07-10T02:21:58.299450Z  INFO bootstrap.log:   + claude-design stage=config-templates
+2026-07-10T02:21:58.299474Z  INFO bootstrap.log:   + comfyui stage=config-templates
+2026-07-10T02:21:58.299495Z  INFO bootstrap.log:   + design-md stage=config-templates
+2026-07-10T02:21:58.299513Z  INFO bootstrap.log:   + excalidraw stage=config-templates
+2026-07-10T02:21:58.299535Z  INFO bootstrap.log:   + humanizer stage=config-templates
+2026-07-10T02:21:58.299576Z  INFO bootstrap.log:   + manim-video stage=config-templates
+2026-07-10T02:21:58.299603Z  INFO bootstrap.log:   + p5js stage=config-templates
+2026-07-10T02:21:58.299627Z  INFO bootstrap.log:   + popular-web-designs stage=config-templates
+2026-07-10T02:21:58.299647Z  INFO bootstrap.log:   + pretext stage=config-templates
+2026-07-10T02:21:58.299799Z  INFO bootstrap.log:   + sketch stage=config-templates
+2026-07-10T02:21:58.299892Z  INFO bootstrap.log:   + songwriting-and-ai-music stage=config-templates
+2026-07-10T02:21:58.300039Z  INFO bootstrap.log:   + touchdesigner-mcp stage=config-templates
+2026-07-10T02:21:58.300066Z  INFO bootstrap.log:   + jupyter-live-kernel stage=config-templates
+2026-07-10T02:21:58.300090Z  INFO bootstrap.log:   + dogfood stage=config-templates
+2026-07-10T02:21:58.300113Z  INFO bootstrap.log:   + himalaya stage=config-templates
+2026-07-10T02:21:58.300138Z  INFO bootstrap.log:   + codebase-inspection stage=config-templates
+2026-07-10T02:21:58.300158Z  INFO bootstrap.log:   + github-auth stage=config-templates
+2026-07-10T02:21:58.300179Z  INFO bootstrap.log:   + github-code-review stage=config-templates
+2026-07-10T02:21:58.300239Z  INFO bootstrap.log:   + github-issues stage=config-templates
+2026-07-10T02:21:58.300287Z  INFO bootstrap.log:   + github-pr-workflow stage=config-templates
+2026-07-10T02:21:58.300311Z  INFO bootstrap.log:   + github-repo-management stage=config-templates
+2026-07-10T02:21:58.300336Z  INFO bootstrap.log:   + gif-search stage=config-templates
+2026-07-10T02:21:58.300360Z  INFO bootstrap.log:   + heartmula stage=config-templates
+2026-07-10T02:21:58.300384Z  INFO bootstrap.log:   + songsee stage=config-templates
+2026-07-10T02:21:58.300406Z  INFO bootstrap.log:   + youtube-content stage=config-templates
+2026-07-10T02:21:58.300469Z  INFO bootstrap.log:   + evaluating-llms-harness stage=config-templates
+2026-07-10T02:21:58.300554Z  INFO bootstrap.log:   + weights-and-biases stage=config-templates
+2026-07-10T02:21:58.300575Z  INFO bootstrap.log:   + huggingface-hub stage=config-templates
+2026-07-10T02:21:58.300664Z  INFO bootstrap.log:   + llama-cpp stage=config-templates
+2026-07-10T02:21:58.300690Z  INFO bootstrap.log:   + serving-llms-vllm stage=config-templates
+2026-07-10T02:21:58.300771Z  INFO bootstrap.log:   + audiocraft-audio-generation stage=config-templates
+2026-07-10T02:21:58.300823Z  INFO bootstrap.log:   + segment-anything-model stage=config-templates
+2026-07-10T02:21:58.300846Z  INFO bootstrap.log:   + obsidian stage=config-templates
+2026-07-10T02:21:58.300866Z  INFO bootstrap.log:   + airtable stage=config-templates
+2026-07-10T02:21:58.303656Z  INFO bootstrap.log:   + google-workspace stage=config-templates
+2026-07-10T02:21:58.303699Z  INFO bootstrap.log:   + maps stage=config-templates
+2026-07-10T02:21:58.303723Z  INFO bootstrap.log:   + nano-pdf stage=config-templates
+2026-07-10T02:21:58.303745Z  INFO bootstrap.log:   + notion stage=config-templates
+2026-07-10T02:21:58.303766Z  INFO bootstrap.log:   + ocr-and-documents stage=config-templates
+2026-07-10T02:21:58.303786Z  INFO bootstrap.log:   + petdex stage=config-templates
+2026-07-10T02:21:58.303810Z  INFO bootstrap.log:   + powerpoint stage=config-templates
+2026-07-10T02:21:58.303831Z  INFO bootstrap.log:   + teams-meeting-pipeline stage=config-templates
+2026-07-10T02:21:58.303851Z  INFO bootstrap.log:   + arxiv stage=config-templates
+2026-07-10T02:21:58.303877Z  INFO bootstrap.log:   + blogwatcher stage=config-templates
+2026-07-10T02:21:58.303896Z  INFO bootstrap.log:   + llm-wiki stage=config-templates
+2026-07-10T02:21:58.303915Z  INFO bootstrap.log:   + polymarket stage=config-templates
+2026-07-10T02:21:58.303934Z  INFO bootstrap.log:   + research-paper-writing stage=config-templates
+2026-07-10T02:21:58.303955Z  INFO bootstrap.log:   + openhue stage=config-templates
+2026-07-10T02:21:58.303979Z  INFO bootstrap.log:   + xurl stage=config-templates
+2026-07-10T02:21:58.303998Z  INFO bootstrap.log:   + hermes-agent-skill-authoring stage=config-templates
+2026-07-10T02:21:58.304035Z  INFO bootstrap.log:   + node-inspect-debugger stage=config-templates
+2026-07-10T02:21:58.304064Z  INFO bootstrap.log:   + plan stage=config-templates
+2026-07-10T02:21:58.304131Z  INFO bootstrap.log:   + python-debugpy stage=config-templates
+2026-07-10T02:21:58.304222Z  INFO bootstrap.log:   + requesting-code-review stage=config-templates
+2026-07-10T02:21:58.304245Z  INFO bootstrap.log:   + simplify-code stage=config-templates
+2026-07-10T02:21:58.304265Z  INFO bootstrap.log:   + spike stage=config-templates
+2026-07-10T02:21:58.304287Z  INFO bootstrap.log:   + systematic-debugging stage=config-templates
+2026-07-10T02:21:58.304322Z  INFO bootstrap.log:   + test-driven-development stage=config-templates
+2026-07-10T02:21:58.304346Z  INFO bootstrap.log:   + yuanbao stage=config-templates
+2026-07-10T02:21:58.304366Z  INFO bootstrap.log:  stage=config-templates
+2026-07-10T02:21:58.304388Z  INFO bootstrap.log: Done: 72 new, 0 updated, 0 unchanged. 72 total bundled. stage=config-templates
+2026-07-10T02:21:58.683052Z  INFO bootstrap.log: [OK] Skills synced to C:\Users\Arismendy\AppData\Local\hermes\skills stage=config-templates
+2026-07-10T02:21:59.339892Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":6424,"stage":"config-templates"} stage=config-templates
+2026-07-10T02:21:59.429025Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=config-templates state=Succeeded duration_ms=Some(8477) error=None
+2026-07-10T02:21:59.429123Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=platform-sdks state=Running duration_ms=None error=None
+2026-07-10T02:22:04.689329Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":292,"stage":"platform-sdks"} stage=platform-sdks
+2026-07-10T02:22:04.786465Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=platform-sdks state=Succeeded duration_ms=Some(5357) error=None
+2026-07-10T02:22:04.786628Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=bootstrap-marker state=Running duration_ms=None error=None
+2026-07-10T02:22:06.809242Z  INFO bootstrap.log: [OK] Bootstrap marker written: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\.hermes-bootstrap-complete stage=bootstrap-marker
+2026-07-10T02:22:06.864356Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":403,"stage":"bootstrap-marker"} stage=bootstrap-marker
+2026-07-10T02:22:06.914927Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=bootstrap-marker state=Succeeded duration_ms=Some(2128) error=None
+2026-07-10T02:22:06.915009Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=configure state=Running duration_ms=None error=None
+2026-07-10T02:22:08.741085Z  INFO bootstrap.log: -> Skipping setup wizard (non-interactive). Configure via the GUI or 'hermes setup'. stage=configure
+2026-07-10T02:22:08.948622Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":124,"stage":"configure"} stage=configure
+2026-07-10T02:22:08.996069Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=configure state=Succeeded duration_ms=Some(2081) error=None
+2026-07-10T02:22:08.996152Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=gateway state=Running duration_ms=None error=None
+2026-07-10T02:22:10.740432Z  INFO bootstrap.log: {"skipped":false,"ok":true,"reason":null,"duration_ms":220,"stage":"gateway"} stage=gateway
+2026-07-10T02:22:10.787232Z  INFO hermes_bootstrap_lib::bootstrap: stage transition stage=gateway state=Succeeded duration_ms=Some(1791) error=None
+2026-07-10T02:22:10.800245Z  INFO hermes_bootstrap_lib::paths: copied installer to HERMES_HOME src="C:\\Users\\Arismendy\\Downloads\\Hermes-Setup.exe" dest="C:\\Users\\Arismendy\\AppData\\Local\\hermes\\hermes-setup.exe"
+2026-07-10T02:22:10.800268Z  INFO hermes_bootstrap_lib::bootstrap: bootstrap complete install_root=C:\Users\Arismendy\AppData\Local\hermes\hermes-agent
+2026-07-10T02:26:49.136365Z  INFO hermes_bootstrap_lib::bootstrap: launching Hermes desktop exe_path="C:\\Users\\Arismendy\\AppData\\Local\\hermes\\hermes-agent\\apps\\desktop\\release\\win-unpacked\\Hermes.exe"
+2026-07-17T21:40:03.127398Z  INFO hermes_bootstrap_lib: Hermes Setup starting mode=Update
+2026-07-17T21:40:06.831943Z  INFO bootstrap.log: [update] waiting for Hermes to exit… stage=update
+2026-07-17T21:40:06.832435Z  INFO hermes_bootstrap_lib::update: update stage stage=update state=Running duration_ms=None error=None
+2026-07-17T21:40:24.990642Z  INFO bootstrap.log: Saved working directory and index state On main: hermes-update-autostash-20260717-214018 stage=update
+2026-07-17T21:41:19.870102Z  INFO bootstrap.log: stderr: Using Python 3.11.15 environment at: venv stage=update
+2026-07-17T21:41:30.037409Z  INFO bootstrap.log: stderr: Resolved 99 packages in 10.02s stage=update
+2026-07-17T21:41:30.090236Z  INFO bootstrap.log: stderr:    Building hermes-agent @ file:///C:/Users/Arismendy/AppData/Local/hermes/hermes-agent stage=update
+2026-07-17T21:41:49.246214Z  INFO bootstrap.log: ⚕ Updating Hermes Agent... stage=update
+2026-07-17T21:41:49.246310Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:41:49.246342Z  INFO bootstrap.log: → Discarded npm lockfile churn (1 file(s)) stage=update
+2026-07-17T21:41:49.246369Z  INFO bootstrap.log: → Fetching updates... stage=update
+2026-07-17T21:41:49.246388Z  INFO bootstrap.log: → Local changes detected — stashing before update... stage=update
+2026-07-17T21:41:49.246409Z  INFO bootstrap.log: → Found 8759 new commit(s) stage=update
+2026-07-17T21:41:49.246429Z  INFO bootstrap.log:   ✓ Pre-update snapshot: 20260717-214027-pre-update stage=update
+2026-07-17T21:41:49.248350Z  INFO bootstrap.log: → Pulling updates... stage=update
+2026-07-17T21:41:49.248555Z  INFO bootstrap.log: → Restoring local changes... stage=update
+2026-07-17T21:41:49.248621Z  INFO bootstrap.log: ✗ Update pulled new code, but restoring local changes hit conflicts. stage=update
+2026-07-17T21:41:49.248652Z  INFO bootstrap.log: Auto-merging agent/error_classifier.py stage=update
+2026-07-17T21:41:49.248817Z  INFO bootstrap.log: CONFLICT (content): Merge conflict in agent/error_classifier.py stage=update
+2026-07-17T21:41:49.248844Z  INFO bootstrap.log: On branch main stage=update
+2026-07-17T21:41:49.248871Z  INFO bootstrap.log: Your branch is up to date with 'origin/main'. stage=update
+2026-07-17T21:41:49.248896Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:41:49.248922Z  INFO bootstrap.log: Unmerged paths: stage=update
+2026-07-17T21:41:49.248954Z  INFO bootstrap.log:   (use "git restore --staged <file>..." to unstage) stage=update
+2026-07-17T21:41:49.248997Z  INFO bootstrap.log:   (use "git add <file>..." to mark resolution) stage=update
+2026-07-17T21:41:49.249052Z  INFO bootstrap.log: 	both modified:   agent/error_classifier.py stage=update
+2026-07-17T21:41:49.249140Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:41:49.249505Z  INFO bootstrap.log: no changes added to commit (use "git add" and/or "git commit -a") stage=update
+2026-07-17T21:41:49.249541Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:41:49.249585Z  INFO bootstrap.log: Conflicted files: stage=update
+2026-07-17T21:41:49.250728Z  INFO bootstrap.log:   • agent/error_classifier.py stage=update
+2026-07-17T21:41:49.250788Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:41:49.251121Z  INFO bootstrap.log: Your stashed changes are preserved — nothing is lost. stage=update
+2026-07-17T21:41:49.251182Z  INFO bootstrap.log:   Stash ref: 32aa6864156baa4e68cec5eda4e6ff79ad733ca1 stage=update
+2026-07-17T21:41:49.251221Z  INFO bootstrap.log: Working tree reset to clean state. stage=update
+2026-07-17T21:41:49.251289Z  INFO bootstrap.log: Restore your changes later with: git stash apply 32aa6864156baa4e68cec5eda4e6ff79ad733ca1 stage=update
+2026-07-17T21:41:49.251359Z  INFO bootstrap.log:   ✓ Cleared 95 stale __pycache__ directories stage=update
+2026-07-17T21:41:49.251390Z  INFO bootstrap.log: → Updating Python dependencies... stage=update
+2026-07-17T21:41:49.251423Z  INFO bootstrap.log:   ✓ Managed uv updated (uv 0.11.29 (901092ee1 2026-07-15 x86_64-pc-windows-msvc)) stage=update
+2026-07-17T21:41:49.251449Z  INFO bootstrap.log:   … still installing dependencies (30s elapsed) — compiling Rust/C extensions can take several minutes stage=update
+2026-07-17T21:42:12.218258Z  INFO bootstrap.log: stderr:       Built hermes-agent @ file:///C:/Users/Arismendy/AppData/Local/hermes/hermes-agent stage=update
+2026-07-17T21:42:12.387902Z  INFO bootstrap.log: stderr: Prepared 1 package in 42.31s stage=update
+2026-07-17T21:42:12.420847Z  INFO bootstrap.log: stderr: Uninstalled 1 package in 32ms stage=update
+2026-07-17T21:42:13.029551Z  INFO bootstrap.log: stderr: Installed 1 package in 608ms stage=update
+2026-07-17T21:42:13.031933Z  INFO bootstrap.log: stderr:  ~ hermes-agent==0.18.2 (from file:///C:/Users/Arismendy/AppData/Local/hermes/hermes-agent) stage=update
+2026-07-17T21:43:36.453890Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:43:36.453980Z  INFO bootstrap.log: > hermes-agent@1.0.0 postinstall stage=update
+2026-07-17T21:43:36.454043Z  INFO bootstrap.log: > echo '✅ Browser tools ready. Run: python run_agent.py --help' stage=update
+2026-07-17T21:43:36.454097Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:43:36.661339Z  INFO bootstrap.log: '✅ Browser tools ready. Run: python run_agent.py --help' stage=update
+2026-07-17T21:43:36.687069Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:43:36.687177Z  INFO bootstrap.log: added 76 packages in 1m stage=update
+2026-07-17T21:45:17.070329Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:45:17.070412Z  INFO bootstrap.log: > hermes-agent@1.0.0 postinstall stage=update
+2026-07-17T21:45:17.070453Z  INFO bootstrap.log: > echo '✅ Browser tools ready. Run: python run_agent.py --help' stage=update
+2026-07-17T21:45:17.070477Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:45:17.318680Z  INFO bootstrap.log: '✅ Browser tools ready. Run: python run_agent.py --help' stage=update
+2026-07-17T21:45:17.472084Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:45:17.472162Z  INFO bootstrap.log: added 663 packages in 2m stage=update
+2026-07-17T21:46:42.845632Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:46:42.845733Z  INFO bootstrap.log: → Refreshing 15 active lazy backend(s)... stage=update
+2026-07-17T21:46:42.845789Z  INFO bootstrap.log:   ↑ 3 refreshed: platform.discord, platform.slack, platform.teams stage=update
+2026-07-17T21:46:42.845839Z  INFO bootstrap.log:   ✓ 11 already current stage=update
+2026-07-17T21:46:42.845879Z  INFO bootstrap.log:   · 1 skipped (unsupported on Windows: Matrix E2EE depends on python-olm, which has no Windows wheel and requires make + libolm to build from sdist. Run Hermes under WSL to use Matrix on Windows.): platform.matrix stage=update
+2026-07-17T21:46:42.845933Z  INFO bootstrap.log: → Updating Node.js dependencies... stage=update
+2026-07-17T21:46:42.845982Z  INFO bootstrap.log:   ✓ repo root + ui-tui, web workspaces (desktop skipped) stage=update
+2026-07-17T21:46:42.846031Z  INFO bootstrap.log: → Building web UI... stage=update
+2026-07-17T21:46:42.846140Z  INFO bootstrap.log:      stage=update
+2026-07-17T21:46:42.847297Z  INFO bootstrap.log:     > web@0.0.0 build stage=update
+2026-07-17T21:46:42.847362Z  INFO bootstrap.log:     > tsc -b && vite build stage=update
+2026-07-17T21:46:42.849911Z  INFO bootstrap.log:      stage=update
+2026-07-17T21:47:29.486379Z  INFO bootstrap.log:     \x1b[36mvite v8.1.0 \x1b[32mbuilding client environment for production...\x1b[36m\x1b[39m stage=update
+2026-07-17T21:47:29.513768Z  INFO bootstrap.log:     \x1b[2K stage=update
+2026-07-17T21:47:32.893046Z  INFO bootstrap.log:     transforming...✓ 489 modules transformed. stage=update
+2026-07-17T21:47:33.387518Z  INFO bootstrap.log:     rendering chunks... stage=update
+2026-07-17T21:47:34.557734Z  INFO bootstrap.log:     computing gzip size... stage=update
+2026-07-17T21:47:34.633079Z  INFO bootstrap.log:     ../hermes_cli/web_dist/index.html                                         0.52 kB │ gzip:   0.32 kB stage=update
+2026-07-17T21:47:34.633300Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/Mondwest-Regular-CWscgue7.woff2            23.82 kB stage=update
+2026-07-17T21:47:34.633356Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/RulesExpanded-Regular-l8uVympt.woff2       33.82 kB stage=update
+2026-07-17T21:47:34.633396Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/RulesExpanded-Bold-DZA7s8Pa.woff2          35.01 kB stage=update
+2026-07-17T21:47:34.633434Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/RulesCompressed-Regular-BSXFyF4x.woff2     37.76 kB stage=update
+2026-07-17T21:47:34.633474Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/RulesCompressed-Medium-CA76_CrB.woff2      38.84 kB stage=update
+2026-07-17T21:47:34.633568Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/Collapse-Bold-mgICk9-_.woff2               59.14 kB stage=update
+2026-07-17T21:47:34.633620Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/Collapse-Regular-DysayoTY.woff2            62.81 kB stage=update
+2026-07-17T21:47:34.633766Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/index-qe7jf57Z.css                        115.77 kB │ gzip:  18.26 kB stage=update
+2026-07-17T21:47:34.633874Z  INFO bootstrap.log:     ../hermes_cli/web_dist/assets/index-BaYHk62d.js                       1,984.04 kB │ gzip: 566.78 kB stage=update
+2026-07-17T21:47:34.633925Z  INFO bootstrap.log:      stage=update
+2026-07-17T21:47:34.639651Z  INFO bootstrap.log:     \x1b[32m✓ built in 5.15s\x1b[39m stage=update
+2026-07-17T21:47:34.648154Z  INFO bootstrap.log:     \x1b[33m[plugin builtin:vite-reporter] stage=update
+2026-07-17T21:47:34.648479Z  INFO bootstrap.log:     (!) Some chunks are larger than 500 kB after minification. Consider: stage=update
+2026-07-17T21:47:34.648520Z  INFO bootstrap.log:     - Using dynamic import() to code-split the application stage=update
+2026-07-17T21:47:34.649735Z  INFO bootstrap.log:     - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting stage=update
+2026-07-17T21:47:34.649836Z  INFO bootstrap.log:     - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\x1b[39m stage=update
+2026-07-17T21:54:19.520406Z  INFO bootstrap.log:   ✓ Web UI built stage=update
+2026-07-17T21:54:19.520535Z  INFO bootstrap.log: → Checking if desktop app needs rebuilding... stage=update
+2026-07-17T21:54:19.520584Z  INFO bootstrap.log:   ✓ Desktop app up to date stage=update
+2026-07-17T21:54:19.520646Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.520690Z  INFO bootstrap.log: ✓ Code updated! stage=update
+2026-07-17T21:54:19.520725Z  INFO bootstrap.log:   ✓ Model catalog cache refreshed from checkout stage=update
+2026-07-17T21:54:19.520759Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.520790Z  INFO bootstrap.log: → Syncing bundled skills... stage=update
+2026-07-17T21:54:19.520823Z  INFO bootstrap.log:   + 1 new: hermes-desktop-plugins stage=update
+2026-07-17T21:54:19.520973Z  INFO bootstrap.log:   ↑ 2 updated: hermes-agent, humanizer stage=update
+2026-07-17T21:54:19.521021Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.521228Z  INFO bootstrap.log: → Syncing bundled skills to all profiles... stage=update
+2026-07-17T21:54:19.521348Z  INFO bootstrap.log:   default: up to date stage=update
+2026-07-17T21:54:19.521392Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.521428Z  INFO bootstrap.log: → Checking configuration for new options... stage=update
+2026-07-17T21:54:19.521469Z  INFO bootstrap.log:   ✓ Configuration is up to date stage=update
+2026-07-17T21:54:19.521566Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.521652Z  INFO bootstrap.log: ✓ Update complete! stage=update
+2026-07-17T21:54:19.521684Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.521751Z  INFO bootstrap.log: ℹ Skill curator stage=update
+2026-07-17T21:54:19.521786Z  INFO bootstrap.log:   Background skill maintenance is enabled. First pass is deferred ~7d after installation; only agent-created skills are in scope and nothing is ever auto-deleted (archive is recoverable). stage=update
+2026-07-17T21:54:19.521824Z  INFO bootstrap.log:   Preview now:  hermes curator run --dry-run stage=update
+2026-07-17T21:54:19.521864Z  INFO bootstrap.log:   Pause it:     hermes curator pause stage=update
+2026-07-17T21:54:19.521935Z  INFO bootstrap.log:   Docs:         https://hermes-agent.nousresearch.com/docs/user-guide/features/curator stage=update
+2026-07-17T21:54:19.521981Z  INFO bootstrap.log:  stage=update
+2026-07-17T21:54:19.522023Z  INFO bootstrap.log: Tip: You can now select a provider and model: stage=update
+2026-07-17T21:54:19.522070Z  INFO bootstrap.log:   hermes model              # Select provider and model stage=update
+2026-07-17T21:54:19.715526Z  INFO hermes_bootstrap_lib::update: update stage stage=update state=Succeeded duration_ms=Some(852884) error=None
+2026-07-17T21:54:19.715623Z  INFO hermes_bootstrap_lib::update: update stage stage=rebuild state=Running duration_ms=None error=None
+2026-07-17T21:54:23.250131Z  INFO bootstrap.log: ✓ Desktop packaged app is up to date (content stamp matches) stage=rebuild
+2026-07-17T21:54:23.250217Z  INFO bootstrap.log: ✓ Desktop packaged app ready: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\apps\desktop\release\win-unpacked\Hermes.exe (not launching; --build-only) stage=rebuild
+2026-07-17T21:54:23.345532Z  INFO hermes_bootstrap_lib::update: update stage stage=rebuild state=Succeeded duration_ms=Some(3630) error=None
+2026-07-17T21:54:23.345967Z  INFO hermes_bootstrap_lib::bootstrap: launching Hermes desktop exe_path="C:\\Users\\Arismendy\\AppData\\Local\\hermes\\hermes-agent\\apps\\desktop\\release\\win-unpacked\\Hermes.exe"

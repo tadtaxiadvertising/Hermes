@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nslookup *)",
+      "Bash(curl *)",
+      "Bash(powershell *)",
+      "Bash(git config *)",
+      "Bash(rmdir *)",
+      "Bash(dir *)",
+      "Bash(npm install)",
+      "Bash(c:\\users\\arismendy\\appdata\\local\\hermes\\hermes-agent\\venv\\scripts\\python.exe *)",
+      "Bash(c:\\users\\arismendy\\appdata\\local\\hermes\\bin\\uv.exe *)",
+      "Bash(c:\\users\\arismendy\\appdata\\local\\hermes\\hermes-agent\\venv\\scripts\\pip.exe *)",
+      "Bash(findstr *)",
+      "Bash(c:\\users\\arismendy\\appdata\\local\\hermes\\hermes-agent\\.venv\\scripts\\python.exe *)",
+      "Bash(c:\\users\\arismendy\\appdata\\local\\hermes\\hermes-agent\\.venv\\scripts\\hermes.exe *)",
+      "Agent(general-purpose)",
+      "Bash(copy *)",
+      "Bash(mkdir *)",
+      "Bash(node *)",
+      "Bash(npm *)",
+      "Bash(type *)",
+      "Bash(del *)",
+      "Agent(Explore)"
+    ]
+  },
+  "$version": 4
+}

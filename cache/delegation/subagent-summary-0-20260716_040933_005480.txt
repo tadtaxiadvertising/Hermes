@@ -1,0 +1,44 @@
+Based on the findings, here is the full summary of how `/campaigns/new` manifests (or 404s) across each app:
+
+---
+
+## What I Did
+- Located 3 copies of `next.config.*` and 2 middleware files under `apps/` inside the active repo at `C:\Users\Arismendy\tad-build-test\`
+- Read all three configs and the driver middleware in full
+- Checked for file existence of `pages/.../campaigns/new.tsx` and sibling paths under each app
+
+---
+
+## Findings
+
+### `apps/advertiser` — 404: route file does not exist
+- **URL space is prefix-scoped**: pages live under `pages/advertiser/`, so the route is `/advertiser/campaigns/new`, NOT `/campaigns/new`
+- `next.config.js` only has one redirect (`/` → `/login`) — nothing touches `/campaigns/new`
+- **`pages/advertiser/campaigns/new.tsx does not exist**` — only `index.tsx` (the list page) is present
+- → **Root cause**: The file `pages/advertiser/campaigns/new.tsx` is simply not created. Visiting `/advertiser/campaigns/new` returns a Next.js 404 because there is no matching page file path; there are no rewrites or redirects that would produce the 404, it is a natural routing miss.
+
+---
+
+### `apps/admin` — Page exists; 404 only via auth/setup failure
+- **`pages/admin/campaigns/new.tsx` exists** (and `[id].tsx`, `[id]/report.tsx`, `index.tsx`)
+- `next.config.ts` redirects are: `/` → `/login`, `/dashboard` → `/admin` — neither intercepts `/admin/campaigns/new`
+- **No middleware file found in `apps/admin`** (no `middleware.ts`), so there is no role-based gate at the framework level
+- → `/admin/campaigns/new` should resolve to the page component without a routing 404. A 404 here would mean either: (a) the page was deleted, (b) a backend 404 from the page component's data-fetch logic, or (c) a deploy/build error. The config itself does not cause it.
+
+---
+
+### `apps/driver` — No campaign page exists; also auth gate redirects to `/driver/login`
+- **No `pages/driver/campaigns/` directory exists at all** — no campaign UI in the driver app
+- `next.config.ts` redirects: `/` → `/login`, `/dashboard` → `/admin` — no rewrite to a backend
+- **`middleware.ts` is the key gate**: any non-root, non-dashboard, non-public path that lacks a `sb-access-token` cookie with DRIVER role → **`302 redirect to `/driver/login`**
+- → For `/driver/campaigns/new`: there is no page file AND middleware would redirect to `/driver/login` before the 404 is even reached (unless the request is already authenticated as DRIVER). This is the worst offender — the route is fundamentally absent in the driver app.
+
+---
+
+## Summary Table
+
+| App | Route served at | `…/campaigns/new.tsx` exists? | Config redirects/rewrites? | Actual 404 cause |
+|-----|----------------|--------------------------------|----------------------------|-------------------|
+| **admin** | `/admin/campaigns/new` | ✅ Yes | No redirects on this path | Route should serve; 404 only if file removed or backend fails |
+| **advertiser** | `/advertiser/campaigns/new` | ❌ No (`index.tsx` only) | No redirects on this path | File simply not created — natural Next.js 404 |
+| **driver** | `/driver/campaigns/new` | ❌ No (no campaigns dir) | Middleware redirects unauthenticated → `/driver/login` | Route absent + auth gate sends to login first |

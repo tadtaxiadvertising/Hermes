@@ -1,6 +1,34 @@
 # ── Secrets (NEVER commit API keys, tokens, passwords) ──
 .env
 auth.json
+profiles/**/.env
+profiles/**/auth.json
+profiles/**/auth.lock
+profiles/**/gateway.lock
+profiles/**/gateway.pid
+profiles/**/gateway_state.json
+profiles/**/state.db*
+profiles/**/logs/
+profiles/**/cache/
+profiles/**/sessions/
+profiles/**/audio_cache/
+profiles/**/image_cache/
+profiles/**/sandboxes/
+profiles/**/workspace/
+profiles/**/plans/
+profiles/**/platforms/
+profiles/**/pairing/
+profiles/**/home/
+profiles/**/hooks/
+profiles/**/cron/
+profiles/**/skins/
+profiles/**/models_dev_cache.json
+profiles/**/.restart_last_processed.json
+profiles/**/.skills_prompt_snapshot.json
+profiles/**/channel_directory.json
+profiles/**/gateway-service/
+profiles/**/skills/
+profiles/**/memories/*.lock
 
 # ── Runtime state & ephemera ──
 logs/
@@ -18,6 +46,10 @@ state.db-wal
 projects.db
 verification_evidence.db
 auth.lock
+.mcp-discovery.lock
+*.bak
+kanban.db*
+kanban/
 context_length_cache.yaml
 
 # ── Caches (model metadata, provider lists) ──

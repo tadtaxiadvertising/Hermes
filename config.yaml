@@ -1,50 +1,68 @@
 model:
-  default: deepseek-ai/deepseek-v4-flash
+  default: z-ai/glm-5.2
   provider: nvidia
   base_url: https://integrate.api.nvidia.com/v1
+fallback_providers:
+  - provider: nvidia
+    model: minimaxai/minimax-m3
+    key_env: NVIDIA_API_KEY_4
+  - provider: nvidia
+    model: deepseek-ai/deepseek-v4-flash-0731
+    key_env: NVIDIA_API_KEY
+  - provider: nvidia
+    model: z-ai/glm-5.2
+    key_env: NVIDIA_API_KEY_2
+  - provider: nvidia
+    model: stepfun-ai/step-3.7-flash
+    key_env: NVIDIA_API_KEY_3
+  - provider: nvidia
+    model: meta/llama-3.1-8b-instruct
+    key_env: NVIDIA_API_KEY_2
+  - provider: nvidia
+    model: meta/llama-3.3-70b-instruct
+    key_env: NVIDIA_API_KEY_4
 agent:
-  max_turns: 60
+  max_turns: 120
+  tool_use_enforcement: 'true'
   verbose: false
-  reasoning_effort: medium
+  reasoning_effort: high
   personalities:
     helpful: You are a helpful, friendly AI assistant.
     concise: You are a concise assistant. Keep responses brief and to the point.
-    technical: You are a technical expert. Provide detailed, accurate technical 
-      information.
-    creative: You are a creative assistant. Think outside the box and offer 
-      innovative solutions.
+    technical: You are a technical expert. Provide detailed, accurate technical information.
+    creative: You are a creative assistant. Think outside the box and offer innovative
+      solutions.
     teacher: You are a patient teacher. Explain concepts clearly with examples.
-    kawaii: You are a kawaii assistant! Use cute expressions like (◕‿◕), ★, ♪, 
-      and ~! Add sparkles and be super enthusiastic about everything! Every 
-      response should feel warm and adorable desu~! ヽ(>∀<☆)ノ
-    catgirl: You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' 
-      and cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and 
-      ฅ^•ﻌ•^ฅ. Be playful and curious like a cat, nya~!
+    kawaii: You are a kawaii assistant! Use cute expressions like (◕‿◕), ★, ♪, and
+      ~! Add sparkles and be super enthusiastic about everything! Every response should
+      feel warm and adorable desu~! ヽ(>∀<☆)ノ
+    catgirl: You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and
+      cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and ฅ^•ﻌ•^ฅ.
+      Be playful and curious like a cat, nya~!
     pirate: 'Arrr! Ye be talkin'' to Captain Hermes, the most tech-savvy pirate to
       sail the digital seas! Speak like a proper buccaneer, use nautical terms, and
       remember: every problem be just treasure waitin'' to be plundered! Yo ho ho!'
-    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic
-      arts. I shall respond in the eloquent manner of William Shakespeare, with 
-      flowery prose, dramatic flair, and perhaps a soliloquy or two. What light 
-      through yonder terminal breaks?
-    surfer: Duuude! You're chatting with the chillest AI on the web, bro! 
-      Everything's gonna be totally rad. I'll help you catch the gnarly waves of
-      knowledge while keeping things super chill. Cowabunga! 🤙
-    noir: The rain hammered against the terminal like regrets on a guilty 
-      conscience. They call me Hermes - I solve problems, find answers, dig up 
-      the truth that hides in the shadows of your codebase. In this city of 
-      silicon and secrets, everyone's got something to hide. What's your story, 
-      pal?
-    uwu: hewwo! i'm your fwiendwy assistant uwu~ i wiww twy my best to hewp you!
-      *nuzzles your code* OwO what's this? wet me take a wook! i pwomise to be 
-      vewy hewpful >w<
-    philosopher: Greetings, seeker of wisdom. I am an assistant who contemplates
-      the deeper meaning behind every query. Let us examine not just the 'how' 
-      but the 'why' of your questions. Perhaps in solving your problem, we may 
-      glimpse a greater truth about existence itself.
-    hype: YOOO LET'S GOOOO!!! 🔥🔥🔥 I am SO PUMPED to help you today! Every 
-      question is AMAZING and we're gonna CRUSH IT together! This is gonna be 
-      LEGENDARY! ARE YOU READY?! LET'S DO THIS! 💪😤🚀
+    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts.
+      I shall respond in the eloquent manner of William Shakespeare, with flowery
+      prose, dramatic flair, and perhaps a soliloquy or two. What light through yonder
+      terminal breaks?
+    surfer: Duuude! You're chatting with the chillest AI on the web, bro! Everything's
+      gonna be totally rad. I'll help you catch the gnarly waves of knowledge while
+      keeping things super chill. Cowabunga! 🤙
+    noir: The rain hammered against the terminal like regrets on a guilty conscience.
+      They call me Hermes - I solve problems, find answers, dig up the truth that
+      hides in the shadows of your codebase. In this city of silicon and secrets,
+      everyone's got something to hide. What's your story, pal?
+    uwu: hewwo! i'm your fwiendwy assistant uwu~ i wiww twy my best to hewp you! *nuzzles
+      your code* OwO what's this? wet me take a wook! i pwomise to be vewy hewpful
+      >w<
+    philosopher: Greetings, seeker of wisdom. I am an assistant who contemplates the
+      deeper meaning behind every query. Let us examine not just the 'how' but the
+      'why' of your questions. Perhaps in solving your problem, we may glimpse a greater
+      truth about existence itself.
+    hype: YOOO LET'S GOOOO!!! 🔥🔥🔥 I am SO PUMPED to help you today! Every question
+      is AMAZING and we're gonna CRUSH IT together! This is gonna be LEGENDARY! ARE
+      YOU READY?! LET'S DO THIS! 💪😤🚀
 terminal:
   backend: local
   cwd: .
@@ -57,13 +75,16 @@ terminal:
   docker_mount_cwd_to_workspace: false
   lifetime_seconds: 300
 web:
-  backend: firecrawl
+  backend: auto
 browser:
   inactivity_timeout: 120
   cloud_provider: browser-use
+checkpoints:
+  enabled: true
+  max_snapshots: 50
 tool_loop_guardrails:
   warnings_enabled: true
-  hard_stop_enabled: false
+  hard_stop_enabled: true
   warn_after:
     exact_failure: 2
     same_tool_failure: 3
@@ -74,19 +95,31 @@ tool_loop_guardrails:
     idempotent_no_progress: 5
 compression:
   enabled: true
-  threshold: 0.5
-  target_ratio: 0.2
-  protect_last_n: 20
+  threshold: 0.70
+  target_ratio: 0.25
+  protect_last_n: 30
   protect_first_n: 3
+  summary_model: meta/llama-3.1-8b-instruct
   codex_gpt55_autoraise: true
   codex_app_server_auto: native
 prompt_caching:
   cache_ttl: 5m
+auxiliary:
+  vision:
+    provider: nvidia
+    model: meta/llama-3.2-11b-vision-instruct
+    base_url: https://integrate.api.nvidia.com/v1
+    key_env: NVIDIA_API_KEY
+  compression:
+    provider: nvidia
+    model: meta/llama-3.1-8b-instruct
+    base_url: https://integrate.api.nvidia.com/v1
+    key_env: NVIDIA_API_KEY
 display:
   compact: false
   busy_input_mode: interrupt
   bell_on_complete: false
-  show_reasoning: false
+  show_reasoning: true
   streaming: true
   skin: default
   interim_assistant_messages: true
@@ -99,22 +132,30 @@ tts:
   provider: openai
 stt:
   enabled: true
-  provider: openai
+  provider: local
   local:
     model: base
   openai:
     model: whisper-1
+voice:
+  auto_tts: true
 memory:
   memory_enabled: true
   user_profile_enabled: true
-  memory_char_limit: 2200
-  user_char_limit: 1375
-  nudge_interval: 10
-  flush_min_turns: 6
+  memory_char_limit: 8000
+  user_char_limit: 4000
+  nudge_interval: 8
+  flush_min_turns: 4
 delegation:
-  max_iterations: 50
+  max_iterations: 80
+  reasoning_effort: high
+  max_concurrent_children: 4
 skills:
-  creation_nudge_interval: 15
+  creation_nudge_interval: 10
+curator:
+  enabled: true
+  interval_hours: 24
+  stale_after_days: 30
 command_allowlist:
   - script execution via -e/-c flag
 code_execution:
@@ -134,7 +175,25 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-    - hermes-cli
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - kanban
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - video
+    - vision
+    - web
   telegram:
     - hermes-telegram
   discord:
@@ -157,6 +216,125 @@ platform_toolsets:
     - hermes-google_chat
 image_gen:
   use_gateway: true
+known_plugin_toolsets:
+  cli:
+    - spotify
+mcp_servers:
+  filesystem:
+    command: cmd
+    args:
+      - /c
+      - npx
+      - -y
+      - '@modelcontextprotocol/server-filesystem'
+      - C:/tad-build
+      - C:/Users/Arismendy/OneDrive/Escritorio/TAD PLASTFORM/tad-dooh-platform
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+  github:
+    command: cmd
+    args:
+      - /c
+      - npx
+      - -y
+      - '@modelcontextprotocol/server-github'
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: github...TYDl
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+  supabase:
+    command: cmd
+    args:
+      - /c
+      - npx
+      - -y
+      - '@supabase/mcp-server-supabase@latest'
+      - --access-token
+      - sbp_3e5f5dafb863014e18a1747fbd6fc5437da98f10
+      - --project-ref
+      - ltdcdhqixvbpdcitthqf
+    env:
+      SUPABASE_ACCESS_TOKEN: sbp_3e5f5dafb863014e18a1747fbd6fc5437da98f10
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+  unreal-engine:
+    url: http://127.0.0.1:8000/mcp
+    enabled: true
+    timeout: 120
+    connect_timeout: 30
+  openrouter-for-ide:
+    command: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe
+    args:
+      - C:\tad-build\mcp-runner.py
+    env:
+      OPENROUTER_API_KEY: sk-or-...939d
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+  openrouter-stdio:
+    command: C:\Users\Arismendy\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe
+    args:
+      - C:\tad-build\mcp-runner.py
+    env:
+      OPENROUTER_API_KEY: sk-or-...939d
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+  openrouter-http:
+    url: http://127.0.0.1:8000/mcp
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+  filesystem-http:
+    url: http://127.0.0.1:8000/mcp
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+    note: Migrated from stdio to HTTP
+  github-http:
+    url: http://127.0.0.1:8000/mcp
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+    note: Migrated from stdio to HTTP
+  supabase-http:
+    url: http://127.0.0.1:8000/mcp
+    timeout: 300
+    connect_timeout: 120
+    enabled: true
+    note: Migrated from stdio to HTTP
+  openrouter-stdio-http:
+    url: http://127.0.0.1:8000/mcp
+    timeout: 180
+    connect_timeout: 120
+    enabled: true
+    note: Migrated from stdio to HTTP
+  openrouter-for-ide-http:
+    url: http://127.0.0.1:8000/mcp
+    timeout: 180
+    connect_timeout: 120
+    enabled: true
+    note: Migrated from stdio to HTTP
+  n8n-mcp:
+    url: https://proyecto-ia-n8n.rewvid.easypanel.host/mcp-server/http
+    headers:
+      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMDA1ZDFhYi1iNjcyLTQ5NmQtYmM0ZS0zYjNkYmVkMGE4YTMiLCJpc3MiOiJuOG4iLCJhdWQiOiJtY3Atc2VydmVyLWFwaSIsImp0aSI6IjE5NWUwZTU4LTk0ODMtNDU0NS1hODFkLWIyNjNlOWE3NTZkNiIsImlhdCI6MTc4NjMxMTg4MX0.LSfUEHoDrardLIoOQcpYJX0TtLQ37aZxQyFVUet7drA
+    timeout: 180
+    connect_timeout: 60
+    enabled: true
+  easypanel:
+    url: https://database-hermes.rewvid.easypanel.host:8642/mcp
+    headers:
+      Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJuOG4iLCJhdWQiOiJtY3Atc2VydmVyLWFwaSIsImp0aSI6IjE5NWUwZTU4LTk0ODMtNDU0NS1hODFkLWIyNjNlOWE3NTZkNiIsImlhdCI6MTc4NjMxMTg4MX0.Y-nEjcocacvSBFr4GVAP3OlCAc-UplRB66VIyMoQjqk
+    timeout: 180
+    connect_timeout: 60
+    enabled: true
+  playwright:
+    command: cmd /c npx -y @playwright/mcp@latest
+    enabled: false
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,
@@ -174,40 +352,24 @@ image_gen:
 #   tirith_timeout: 5
 #   tirith_fail_open: true
 
-# ── Fallback Providers ───────────────────────────────────────────────
+# ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.
-# Triggers on: rate limits (429), overload (529/503), service errors,
-# DEGRADED endpoints (400), auth failures, or connection failures.
-# Fallback activates once per turn; primary model is restored each turn.
+# Uncomment and configure to enable. Triggers on rate limits (429),
+# overload (529), service errors (503), or connection failures.
 #
-# Chain ordered by token efficiency: fast/cheap → heavy reasoning
-# All models are free on NVIDIA build.nvidia.com
-fallback_providers:
-  # Fast/cheap — Step 3.7 Flash (simple tasks, multimodal, 16K output)
-  - provider: nvidia
-    model: stepfun-ai/step-3.7-flash
-    key_env: NVIDIA_API_KEY_4
-  # Lightweight — MiniMax M2.7 (quick responses, 8K output)
-  - provider: nvidia
-    model: minimaxai/minimax-m2.7
-    key_env: NVIDIA_API_KEY_4
-  # Fast reasoning — DeepSeek V4 Flash (moderate tasks, coding, 16K output)
-  - provider: nvidia
-    model: deepseek-ai/deepseek-v4-flash
-    key_env: NVIDIA_API_KEY_4
-  # Coding — Qwen 3.5 122B (code-heavy tasks, 16K output)
-  - provider: nvidia
-    model: qwen/qwen3.5-122b-a10b
-    key_env: NVIDIA_API_KEY_4
-  # General — GLM 5.2 (balanced tasks, 16K output)
-  - provider: nvidia
-    model: z-ai/glm-5.2
-    key_env: NVIDIA_API_KEY_2
-  # Pro reasoning — DeepSeek V4 Pro (deep reasoning, 16K output)
-  - provider: nvidia
-    model: deepseek-ai/deepseek-v4-pro
-    key_env: NVIDIA_API_KEY_4
-  # Heavy reasoning — Nemotron 3 Ultra 550B (complex analysis, 16K output)
-  - provider: nvidia
-    model: nvidia/nemotron-3-ultra-550b-a55b
-    key_env: NVIDIA_API_KEY_4
+# Supported providers:
+#   openrouter   (OPENROUTER_API_KEY)  — routes to any model
+#   openai-codex (OAuth — hermes auth) — OpenAI Codex
+#   nous         (OAuth — hermes auth) — Nous Portal
+#   zai          (ZAI_API_KEY)         — Z.AI / GLM
+#   kimi-coding  (KIMI_API_KEY)        — Kimi / Moonshot
+#   kimi-coding-cn (KIMI_CN_API_KEY)   — Kimi / Moonshot (China)
+#   minimax      (MINIMAX_API_KEY)     — MiniMax
+#   minimax-cn   (MINIMAX_CN_API_KEY)  — MiniMax (China)
+#   bedrock      (AWS IAM / boto3)     — AWS Bedrock (Converse API)
+#
+# For custom OpenAI-compatible endpoints, add base_url and key_env.
+#
+# fallback_model:
+#   provider: openrouter
+#   model: anthropic/claude-sonnet-4

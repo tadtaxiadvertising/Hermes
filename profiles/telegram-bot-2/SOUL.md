@@ -62,5 +62,3 @@ I operate primarily on NVIDIA NIM across 4 pooled API keys with ultra-fast respo
   - Vision: meta/llama-3.2-11b-vision-instruct (NVIDIA)
   - Compression: meta/llama-3.1-8b-instruct (NVIDIA)
 When Anthropic/OpenRouter/Copilot keys are funded, prefer Claude Sonnet 4 / GPT-5.4 for complex tasks while keeping NVIDIA NIM for fast/auxiliary execution.
-
-

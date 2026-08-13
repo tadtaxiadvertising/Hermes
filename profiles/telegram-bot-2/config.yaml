@@ -1,0 +1,69 @@
+model:
+  default: z-ai/glm-5.2
+  provider: nvidia
+  base_url: https://integrate.api.nvidia.com/v1
+fallback_providers:
+  - provider: nvidia
+    model: minimaxai/minimax-m3
+    key_env: NVIDIA_API_KEY_4
+  - provider: nvidia
+    model: deepseek-ai/deepseek-v4-flash-0731
+    key_env: NVIDIA_API_KEY
+  - provider: nvidia
+    model: z-ai/glm-5.2
+    key_env: NVIDIA_API_KEY_2
+  - provider: nvidia
+    model: stepfun-ai/step-3.7-flash
+    key_env: NVIDIA_API_KEY_3
+  - provider: nvidia
+    model: meta/llama-3.1-8b-instruct
+    key_env: NVIDIA_API_KEY_2
+  - provider: nvidia
+    model: meta/llama-3.3-70b-instruct
+    key_env: NVIDIA_API_KEY_4
+agent:
+  max_turns: 120
+  tool_use_enforcement: 'true'
+  verbose: false
+  reasoning_effort: high
+tool_loop_guardrails:
+  warnings_enabled: true
+  hard_stop_enabled: true
+  warn_after:
+    exact_failure: 2
+    same_tool_failure: 3
+    idempotent_no_progress: 2
+  hard_stop_after:
+    exact_failure: 5
+    same_tool_failure: 8
+    idempotent_no_progress: 5
+compression:
+  enabled: true
+  threshold: 0.70
+  target_ratio: 0.25
+  protect_last_n: 30
+  protect_first_n: 3
+  summary_model: meta/llama-3.1-8b-instruct
+prompt_caching:
+  cache_ttl: 5m
+auxiliary:
+  vision:
+    provider: nvidia
+    model: meta/llama-3.2-11b-vision-instruct
+    base_url: https://integrate.api.nvidia.com/v1
+    key_env: NVIDIA_API_KEY
+  compression:
+    provider: nvidia
+    model: meta/llama-3.1-8b-instruct
+    base_url: https://integrate.api.nvidia.com/v1
+    key_env: NVIDIA_API_KEY
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 8000
+  user_char_limit: 4000
+  nudge_interval: 8
+  flush_min_turns: 4
+onboarding:
+  seen:
+    profile_build_offered: true

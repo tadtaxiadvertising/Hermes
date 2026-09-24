@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "baseUrl": "https://honcho.rewvid.easypanel.host/",
+  "hosts": {
+    "hermes_tad-shared": {
+      "workspace": "tad-dooh-platform",
+      "apiKey": "hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv",
+      "recallMode": "hybrid",
+      "injectionFrequency": "every-turn",
+      "contextCadence": 1,
+      "dialecticCadence": 2,
+      "dialecticDepth": 2,
+      "dialecticDepthLevels": ["low", "medium"],
+      "reasoningHeuristic": true,
+      "reasoningLevelCap": "high",
+      "contextTokens": 4096,
+      "firstTurnBaseWait": 1.5,
+      "firstTurnDialecticWait": 3.0,
+      "queryRewrite": true,
+      "initOnSessionStart": true,
+      "sessionStrategy": "per-workspace",
+      "pinUserPeer": true,
+      "pinAiPeer": true,
+      "peerNameAliases": {
+        "user": "user",
+        "ai": "ai"
+      }
+    }
+  }
+}

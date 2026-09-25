@@ -92,3 +92,5 @@ skills/
 
 # ── Bootstrap cache ──
 bootstrap-cache/
+profiles/**/*.tmp
+profiles/**/.models_dev_cache*

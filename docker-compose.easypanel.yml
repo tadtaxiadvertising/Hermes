@@ -4,6 +4,8 @@
 # Docker Compose file: docker-compose.easypanel.yml
 # Target services: (todos - se levantan juntos)
 # Auto Deploy: ON
+#
+# SECRETS: Configura en Easypanel → Service → Environment Variables (NO en este archivo)
 
 version: '3.8'
 
@@ -54,7 +56,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - HONCHO_API_KEY=${HONCHO_API_KEY:-hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv}
+      - HONCHO_API_KEY=${HONCHO_API_KEY}
       - HONCHO_DATABASE_URL=postgresql://postgres:postgres@honcho-db:5432/honcho
       - HONCHO_REDIS_URL=redis://honcho-redis:6379/0
       - HONCHO_LOG_LEVEL=INFO
@@ -90,7 +92,7 @@ services:
     environment:
       - HERMES_HOME=/data/hermes
       - HONCHO_URL=http://honcho:8000/
-      - HONCHO_API_KEY=${HONCHO_API_KEY:-hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv}
+      - HONCHO_API_KEY=${HONCHO_API_KEY}
       - HERMES_CRON_ENABLED=true
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}
       - NVIDIA_API_KEY_2=${NVIDIA_API_KEY_2}

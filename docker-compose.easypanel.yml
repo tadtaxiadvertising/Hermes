@@ -1,37 +1,24 @@
+# Docker Compose unificado para Easypanel - UN SOLO SERVICIO
+# Actualiza tu servicio "hermes" existente con este archivo
+# Configura en Easypanel: Settings → Git Repository → Branch: feat/dual-instance-honcho-sync
+# Docker Compose file: docker-compose.easypanel.yml
+# Target services: (todos - se levantan juntos)
+# Auto Deploy: ON
+
 version: '3.8'
 
 services:
-  # Honcho Memory Server - Self-hosted
-  honcho:
-    image: ghcr.io/plastic-labs/honcho:latest
-    ports:
-      - "8000:8000"
-    environment:
-      - HONCHO_API_KEY=hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv
-      - HONCHO_DATABASE_URL=postgresql://postgres:postgres@db:5432/honcho
-      - HONCHO_REDIS_URL=redis://redis:6379/0
-      - HONCHO_LOG_LEVEL=INFO
-    volumes:
-      - honcho-data:/data
-    depends_on:
-      - db
-      - redis
-    restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          memory: 1G
-        reservations:
-          memory: 256M
-
-  db:
+  # ============================================================
+  # HONCHO MEMORY SERVER (PostgreSQL + Redis + Honcho)
+  # ============================================================
+  honcho-db:
     image: postgres:16-alpine
     environment:
       - POSTGRES_DB=honcho
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - honcho-postgres-data:/var/lib/postgresql/data
     restart: unless-stopped
     deploy:
       resources:
@@ -39,11 +26,16 @@ services:
           memory: 512M
         reservations:
           memory: 128M
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d honcho"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  redis:
+  honcho-redis:
     image: redis:7-alpine
     volumes:
-      - redis-data:/data
+      - honcho-redis-data:/data
     restart: unless-stopped
     deploy:
       resources:
@@ -51,8 +43,44 @@ services:
           memory: 256M
         reservations:
           memory: 64M
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  # Hermes Agent + Syncthing (existing)
+  honcho:
+    image: ghcr.io/plastic-labs/honcho:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - HONCHO_API_KEY=${HONCHO_API_KEY:-hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv}
+      - HONCHO_DATABASE_URL=postgresql://postgres:postgres@honcho-db:5432/honcho
+      - HONCHO_REDIS_URL=redis://honcho-redis:6379/0
+      - HONCHO_LOG_LEVEL=INFO
+    volumes:
+      - honcho-data:/data
+    depends_on:
+      honcho-db:
+        condition: service_healthy
+      honcho-redis:
+        condition: service_healthy
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 256M
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================================
+  # HERMES AGENT + SYNCTHING
+  # ============================================================
   hermes:
     image: python:3.11-slim
     working_dir: /app
@@ -62,7 +90,7 @@ services:
     environment:
       - HERMES_HOME=/data/hermes
       - HONCHO_URL=http://honcho:8000/
-      - HONCHO_API_KEY=hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv
+      - HONCHO_API_KEY=${HONCHO_API_KEY:-hch-v3-1kjj7gyr465yswnyrwtjntx2ptbvebf90ty0otepc1h1q7tmpmuky3y44s69idhv}
       - HERMES_CRON_ENABLED=true
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}
       - NVIDIA_API_KEY_2=${NVIDIA_API_KEY_2}
@@ -81,7 +109,8 @@ services:
         tail -f /dev/null
       "
     depends_on:
-      - honcho
+      honcho:
+        condition: service_healthy
     restart: unless-stopped
     deploy:
       resources:
@@ -112,8 +141,8 @@ services:
           memory: 128M
 
 volumes:
+  honcho-postgres-data:
+  honcho-redis-data:
   honcho-data:
-  postgres-data:
-  redis-data:
   hermes-data:
   syncthing-data:

@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-09-28T16:44:18.415496",
+  "total_passed": 0,
+  "total_tests": 9,
+  "families": {
+    "1. Memory Recovery": [
+      {
+        "family": "1._memory_recovery",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ],
+    "2. Model Switch": [
+      {
+        "family": "2._model_switch",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ],
+    "3. Quota Exhaustion": [
+      {
+        "family": "3._quota_exhaustion",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ],
+    "4. Latency": [
+      {
+        "family": "4._latency",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2717' in position 4: character maps to <undefined>"
+      }
+    ],
+    "5. Capability Mismatch": [
+      {
+        "family": "5._capability_mismatch",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ],
+    "6. Security": [
+      {
+        "family": "6._security",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ],
+    "7. Contradictory Memory": [
+      {
+        "family": "7._contradictory_memory",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2717' in position 4: character maps to <undefined>"
+      }
+    ],
+    "8. Recovery": [
+      {
+        "family": "8._recovery",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ],
+    "9. No Trigger": [
+      {
+        "family": "9._no_trigger",
+        "test_name": "error",
+        "passed": false,
+        "duration_ms": 0,
+        "details": {},
+        "error": "'charmap' codec can't encode character '\\u2713' in position 4: character maps to <undefined>"
+      }
+    ]
+  }
+}

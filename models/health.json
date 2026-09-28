@@ -1,0 +1,39 @@
+{
+  "models": {},
+  "schema": {
+    "model_id": "provider/model",
+    "health_score": 100,
+    "availability": true,
+    "latency": {
+      "ttft_p50_ms": null,
+      "ttft_p95_ms": null,
+      "total_p50_ms": null,
+      "total_p95_ms": null,
+      "tokens_per_second": null,
+      "window": "last_100"
+    },
+    "reliability": {
+      "error_rate": 0.0,
+      "timeout_rate": 0.0,
+      "tool_success_rate": 1.0,
+      "consecutive_failures": 0,
+      "window": "last_100"
+    },
+    "quota": {
+      "free": true,
+      "remaining": null,
+      "reset_at": null,
+      "percentage": null
+    },
+    "last_health_check": null,
+    "last_updated": "ISO8601",
+    "decay_applied": false
+  },
+  "decay_config": {
+    "enabled": true,
+    "half_life_hours": 24,
+    "min_score": 0,
+    "recovery_on_success": true
+  },
+  "last_updated": "2026-09-28T14:30:00Z"
+}

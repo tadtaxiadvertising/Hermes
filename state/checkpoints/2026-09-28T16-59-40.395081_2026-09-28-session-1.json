@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-28T16:59:40.395081",
+  "session_id": "2026-09-28-session-1",
+  "objective": "Model switch: a -> b",
+  "current_task": "unknown",
+  "completed": [],
+  "in_progress": [],
+  "blocked": [],
+  "decisions": [],
+  "files_changed": [],
+  "model_used": "b",
+  "provider_used": "b",
+  "next_action": "Continue with new model",
+  "risks": [],
+  "version": "1.0",
+  "schema_version": "1.0"
+}

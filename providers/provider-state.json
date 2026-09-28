@@ -1,0 +1,49 @@
+{
+  "openrouter": {
+    "status": "healthy",
+    "last_health_check": "2026-09-28T16:30:00Z",
+    "health_score": 100,
+    "latency_ms": null,
+    "error_rate": 0,
+    "timeout_rate": 0,
+    "models_discovered": 460,
+    "free_models": 20,
+    "quota_status": "unlimited",
+    "last_error": null,
+    "consecutive_failures": 0
+  },
+  "qwencloud": {
+    "status": "error",
+    "last_health_check": "2026-09-28T16:30:00Z",
+    "health_score": 0,
+    "latency_ms": null,
+    "error_rate": 1.0,
+    "timeout_rate": 0,
+    "models_discovered": 0,
+    "region": "unknown",
+    "quota_remaining": null,
+    "quota_expiry": null,
+    "quota_percentage": null,
+    "last_error": "Invalid API key - 401 Unauthorized",
+    "consecutive_failures": 1
+  },
+  "nvidia": {
+    "status": "healthy",
+    "last_health_check": "2026-09-28T16:30:00Z",
+    "health_score": 100,
+    "latency_ms": null,
+    "error_rate": 0,
+    "timeout_rate": 0,
+    "models_discovered": 81,
+    "quota_status": "tier_based",
+    "rate_limit_remaining": null,
+    "last_error": null,
+    "consecutive_failures": 0
+  },
+  "global": {
+    "free_mode": true,
+    "last_updated": "2026-09-28T16:30:00Z",
+    "active_provider": "openrouter",
+    "fallback_chain": ["openrouter", "nvidia", "qwencloud"]
+  }
+}

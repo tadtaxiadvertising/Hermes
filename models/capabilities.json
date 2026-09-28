@@ -1,0 +1,26 @@
+{
+  "capabilities_schema": {
+    "reasoning": "0.0-1.0: logical deduction, problem solving",
+    "coding": "0.0-1.0: code generation, debugging, refactoring",
+    "tool_use": "0.0-1.0: function calling, API interaction",
+    "vision": "0.0-1.0: image understanding, multimodal",
+    "long_context": "0.0-1.0: large context handling, retrieval quality",
+    "speed": "0.0-1.0: tokens/second relative",
+    "planning": "0.0-1.0: multi-step planning, decomposition",
+    "structured_output": "0.0-1.0: JSON/schema compliance"
+  },
+  "defaults_by_family": {
+    "nemotron": { "reasoning": 0.9, "coding": 0.85, "tool_use": 0.8, "planning": 0.85 },
+    "qwen": { "reasoning": 0.8, "coding": 0.85, "tool_use": 0.75, "long_context": 0.8 },
+    "llama": { "reasoning": 0.75, "coding": 0.7, "tool_use": 0.7, "speed": 0.8 },
+    "codellama": { "coding": 0.95, "tool_use": 0.8, "reasoning": 0.7 },
+    "deepseek": { "coding": 0.9, "reasoning": 0.85, "tool_use": 0.8 },
+    "mistral": { "reasoning": 0.75, "coding": 0.7, "speed": 0.85, "tool_use": 0.7 },
+    "gemma": { "reasoning": 0.7, "coding": 0.65, "speed": 0.9, "tool_use": 0.65 },
+    "phi": { "reasoning": 0.7, "coding": 0.65, "speed": 0.95, "long_context": 0.5 },
+    "yi": { "reasoning": 0.8, "coding": 0.75, "long_context": 0.85 },
+    "command-r": { "reasoning": 0.8, "tool_use": 0.9, "long_context": 0.9, "planning": 0.85 }
+  },
+  "last_updated": "2026-09-28T14:30:00Z",
+  "source": "heuristic defaults - to be replaced by benchmarks"
+}

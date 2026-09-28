@@ -1,0 +1,26 @@
+[
+  {
+    "capability_fit": 0.3413,
+    "task_fit": 0.195,
+    "speed": 0.1711,
+    "reliability": 0.1463,
+    "quota_value": 0.0975,
+    "context_fit": 0.0488,
+    "version": 2,
+    "updated_at": "2026-09-28T16:53:27.189855",
+    "evidence_count": 1,
+    "adaptation_reason": "Auto-adaptation from 22 benchmark runs"
+  },
+  {
+    "capability_fit": 0.3328,
+    "task_fit": 0.1902,
+    "speed": 0.1916,
+    "reliability": 0.1427,
+    "quota_value": 0.0951,
+    "context_fit": 0.0476,
+    "version": 2,
+    "updated_at": "2026-09-28T16:54:35.374978",
+    "evidence_count": 1,
+    "adaptation_reason": "Auto-adaptation from 22 benchmark runs"
+  }
+]

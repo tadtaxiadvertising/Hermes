@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-09-28T15:34:41.979177",
+  "session_id": "2026-09-28-session-1",
+  "objective": "Test checkpoint",
+  "current_task": "Testing checkpoint system",
+  "completed": [],
+  "in_progress": [],
+  "blocked": [],
+  "decisions": [],
+  "files_changed": [],
+  "model_used": "",
+  "provider_used": "",
+  "next_action": "Verify loading",
+  "risks": [],
+  "version": "1.0",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,582 @@
+{
+  "models": {
+    "openrouter/google/gemma-4-26b-a4b-it:free": {
+      "benchmarks": [
+        {
+          "task_type": "CODING",
+          "runs": [
+            {
+              "model_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:15:12.138242",
+              "latency_ms": 0,
+              "ttft_ms": 0,
+              "tokens_per_second": 0,
+              "quality_score": 0,
+              "success": false,
+              "failure_reason": "HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate",
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "context_length": 0
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 0.0,
+            "avg_ttft_ms": 0.0,
+            "avg_tps": 0.0,
+            "avg_quality": 0.0,
+            "success_rate": 0.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:15:13.138531"
+          }
+        },
+        {
+          "task_type": "REASONING",
+          "runs": [
+            {
+              "model_id": "openrouter/google/gemma-4-26b-a4b-it:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:15:13.423504",
+              "latency_ms": 0,
+              "ttft_ms": 0,
+              "tokens_per_second": 0,
+              "quality_score": 0,
+              "success": false,
+              "failure_reason": "HTTP 429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate",
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "context_length": 0
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 0.0,
+            "avg_ttft_ms": 0.0,
+            "avg_tps": 0.0,
+            "avg_quality": 0.0,
+            "success_rate": 0.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:15:14.424373"
+          }
+        }
+      ]
+    },
+    "openrouter/nvidia/nemotron-3.5-lightning:free": {
+      "benchmarks": [
+        {
+          "task_type": "CODING",
+          "runs": [
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:18:33.993114",
+              "latency_ms": 16290.877103805542,
+              "ttft_ms": 16290.877103805542,
+              "tokens_per_second": 0.0,
+              "quality_score": 0.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 13,
+              "output_tokens": 0,
+              "context_length": 71
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:18:48.153126",
+              "latency_ms": 12154.000282287598,
+              "ttft_ms": 12154.000282287598,
+              "tokens_per_second": 0.0,
+              "quality_score": 0.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 9,
+              "output_tokens": 0,
+              "context_length": 47
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:21:33.880929",
+              "latency_ms": 13856.14013671875,
+              "ttft_ms": 13856.14013671875,
+              "tokens_per_second": 36.08508538932865,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 28,
+              "output_tokens": 500,
+              "context_length": 2108
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:21:50.360023",
+              "latency_ms": 14476.31049156189,
+              "ttft_ms": 14476.31049156189,
+              "tokens_per_second": 34.539187335850905,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 23,
+              "output_tokens": 500,
+              "context_length": 2076
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:22:46.717042",
+              "latency_ms": 30007.858276367188,
+              "ttft_ms": 30007.858276367188,
+              "tokens_per_second": 16.662302100839266,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 28,
+              "output_tokens": 500,
+              "context_length": 1973
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:23:04.940903",
+              "latency_ms": 16219.457626342773,
+              "ttft_ms": 16219.457626342773,
+              "tokens_per_second": 30.827171383827707,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 23,
+              "output_tokens": 500,
+              "context_length": 1905
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:26:13.721963",
+              "latency_ms": 114233.07633399963,
+              "ttft_ms": 114233.07633399963,
+              "tokens_per_second": 4.377015975111082,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 28,
+              "output_tokens": 500,
+              "context_length": 2158
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 31033.960035869055,
+            "avg_ttft_ms": 31033.960035869055,
+            "avg_tps": 17.498680312136802,
+            "avg_quality": 0.7142857142857143,
+            "success_rate": 1.0,
+            "run_count": 7,
+            "last_run": "2026-09-28T16:26:15.723316"
+          }
+        },
+        {
+          "task_type": "REASONING",
+          "runs": [
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:19:07.900536",
+              "latency_ms": 17741.02210998535,
+              "ttft_ms": 17741.02210998535,
+              "tokens_per_second": 0.0,
+              "quality_score": 0.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 24,
+              "output_tokens": 0,
+              "context_length": 110
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:19:26.078262",
+              "latency_ms": 16173.256158828735,
+              "ttft_ms": 16173.256158828735,
+              "tokens_per_second": 0.0,
+              "quality_score": 0.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 27,
+              "output_tokens": 0,
+              "context_length": 102
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:23:26.302196",
+              "latency_ms": 19349.34639930725,
+              "ttft_ms": 19349.34639930725,
+              "tokens_per_second": 25.840666122856796,
+              "quality_score": 0.7,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 38,
+              "output_tokens": 500,
+              "context_length": 2127
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:23:58.578550",
+              "latency_ms": 30273.625135421753,
+              "ttft_ms": 30273.625135421753,
+              "tokens_per_second": 16.516026665566834,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 45,
+              "output_tokens": 500,
+              "context_length": 1751
+            },
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:26:24.637425",
+              "latency_ms": 8899.750709533691,
+              "ttft_ms": 8899.750709533691,
+              "tokens_per_second": 56.18134892973849,
+              "quality_score": 0.5,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 38,
+              "output_tokens": 500,
+              "context_length": 257
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 18487.400102615356,
+            "avg_ttft_ms": 18487.400102615356,
+            "avg_tps": 19.707608343632423,
+            "avg_quality": 0.44000000000000006,
+            "success_rate": 1.0,
+            "run_count": 5,
+            "last_run": "2026-09-28T16:26:26.638671"
+          }
+        },
+        {
+          "task_type": "FAST_QA",
+          "runs": [
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-lightning:free",
+              "provider": "openrouter",
+              "task_type": "FAST_QA",
+              "timestamp": "2026-09-28T16:26:30.397821",
+              "latency_ms": 3739.1209602355957,
+              "ttft_ms": 3739.1209602355957,
+              "tokens_per_second": 38.77916802960656,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 23,
+              "output_tokens": 145,
+              "context_length": 74
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 3739.1209602355957,
+            "avg_ttft_ms": 3739.1209602355957,
+            "avg_tps": 38.77916802960656,
+            "avg_quality": 1.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:26:32.399039"
+          }
+        }
+      ]
+    },
+    "openrouter/stealth/space-bunny-alpha": {
+      "benchmarks": [
+        {
+          "task_type": "CODING",
+          "runs": [
+            {
+              "model_id": "openrouter/stealth/space-bunny-alpha",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:26:36.121111",
+              "latency_ms": 3715.0344848632812,
+              "ttft_ms": 3715.0344848632812,
+              "tokens_per_second": 66.21742032336832,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 168,
+              "output_tokens": 246,
+              "context_length": 532
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 3715.0344848632812,
+            "avg_ttft_ms": 3715.0344848632812,
+            "avg_tps": 66.21742032336832,
+            "avg_quality": 1.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:26:38.122894"
+          }
+        },
+        {
+          "task_type": "REASONING",
+          "runs": [
+            {
+              "model_id": "openrouter/stealth/space-bunny-alpha",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:26:45.721020",
+              "latency_ms": 7575.361967086792,
+              "ttft_ms": 7575.361967086792,
+              "tokens_per_second": 35.3778474433827,
+              "quality_score": 0.8,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 178,
+              "output_tokens": 268,
+              "context_length": 487
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 7575.361967086792,
+            "avg_ttft_ms": 7575.361967086792,
+            "avg_tps": 35.3778474433827,
+            "avg_quality": 0.8,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:26:47.722063"
+          }
+        },
+        {
+          "task_type": "FAST_QA",
+          "runs": [
+            {
+              "model_id": "openrouter/stealth/space-bunny-alpha",
+              "provider": "openrouter",
+              "task_type": "FAST_QA",
+              "timestamp": "2026-09-28T16:26:49.023293",
+              "latency_ms": 1291.255235671997,
+              "ttft_ms": 1291.255235671997,
+              "tokens_per_second": 6.195521829451965,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 163,
+              "output_tokens": 8,
+              "context_length": 70
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 1291.255235671997,
+            "avg_ttft_ms": 1291.255235671997,
+            "avg_tps": 6.195521829451965,
+            "avg_quality": 1.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:26:51.023760"
+          }
+        }
+      ]
+    },
+    "openrouter/liquid/lfm-2.5-2.6b:free": {
+      "benchmarks": [
+        {
+          "task_type": "CODING",
+          "runs": [
+            {
+              "model_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:26:58.737057",
+              "latency_ms": 2644.4294452667236,
+              "ttft_ms": 2644.4294452667236,
+              "tokens_per_second": 189.07670268721,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 20,
+              "output_tokens": 500,
+              "context_length": 1001
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 2644.4294452667236,
+            "avg_ttft_ms": 2644.4294452667236,
+            "avg_tps": 189.07670268721,
+            "avg_quality": 1.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:27:00.741031"
+          }
+        },
+        {
+          "task_type": "REASONING",
+          "runs": [
+            {
+              "model_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:27:21.725400",
+              "latency_ms": 2789.914608001709,
+              "ttft_ms": 2789.914608001709,
+              "tokens_per_second": 179.21695472899353,
+              "quality_score": 0.5,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 32,
+              "output_tokens": 500,
+              "context_length": 587
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 2789.914608001709,
+            "avg_ttft_ms": 2789.914608001709,
+            "avg_tps": 179.21695472899353,
+            "avg_quality": 0.5,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:27:23.726609"
+          }
+        },
+        {
+          "task_type": "FAST_QA",
+          "runs": [
+            {
+              "model_id": "openrouter/liquid/lfm-2.5-2.6b:free",
+              "provider": "openrouter",
+              "task_type": "FAST_QA",
+              "timestamp": "2026-09-28T16:27:27.446539",
+              "latency_ms": 3712.879180908203,
+              "ttft_ms": 3712.879180908203,
+              "tokens_per_second": 24.239948464465037,
+              "quality_score": 1.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 17,
+              "output_tokens": 90,
+              "context_length": 314
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 3712.879180908203,
+            "avg_ttft_ms": 3712.879180908203,
+            "avg_tps": 24.239948464465037,
+            "avg_quality": 1.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:27:29.450338"
+          }
+        }
+      ]
+    },
+    "openrouter/nvidia/nemotron-3.5-content-safety:free": {
+      "benchmarks": [
+        {
+          "task_type": "CODING",
+          "runs": [
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+              "provider": "openrouter",
+              "task_type": "CODING",
+              "timestamp": "2026-09-28T16:27:30.862182",
+              "latency_ms": 1399.101734161377,
+              "ttft_ms": 1399.101734161377,
+              "tokens_per_second": 60.0385218236826,
+              "quality_score": 0.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 474,
+              "output_tokens": 84,
+              "context_length": 88
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 1399.101734161377,
+            "avg_ttft_ms": 1399.101734161377,
+            "avg_tps": 60.0385218236826,
+            "avg_quality": 0.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:27:32.862852"
+          }
+        },
+        {
+          "task_type": "REASONING",
+          "runs": [
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+              "provider": "openrouter",
+              "task_type": "REASONING",
+              "timestamp": "2026-09-28T16:27:35.255575",
+              "latency_ms": 2379.103899002075,
+              "ttft_ms": 2379.103899002075,
+              "tokens_per_second": 50.43915906755249,
+              "quality_score": 0.0,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 484,
+              "output_tokens": 120,
+              "context_length": 127
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 2379.103899002075,
+            "avg_ttft_ms": 2379.103899002075,
+            "avg_tps": 50.43915906755249,
+            "avg_quality": 0.0,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:27:37.256078"
+          }
+        },
+        {
+          "task_type": "FAST_QA",
+          "runs": [
+            {
+              "model_id": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+              "provider": "openrouter",
+              "task_type": "FAST_QA",
+              "timestamp": "2026-09-28T16:27:38.810363",
+              "latency_ms": 1540.7304763793945,
+              "ttft_ms": 1540.7304763793945,
+              "tokens_per_second": 68.1494924710923,
+              "quality_score": 0.2,
+              "success": true,
+              "failure_reason": null,
+              "input_tokens": 469,
+              "output_tokens": 105,
+              "context_length": 50
+            }
+          ],
+          "aggregated": {
+            "avg_latency_ms": 1540.7304763793945,
+            "avg_ttft_ms": 1540.7304763793945,
+            "avg_tps": 68.1494924710923,
+            "avg_quality": 0.2,
+            "success_rate": 1.0,
+            "run_count": 1,
+            "last_run": "2026-09-28T16:27:40.814899"
+          }
+        }
+      ]
+    }
+  },
+  "last_updated": "2026-09-28T16:27:40.816885",
+  "version": "1.0"
+}

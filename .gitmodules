@@ -1,4 +1,4 @@
 [submodule "hermes-agent"]
 	path = hermes-agent
 	url = https://github.com/tadtaxiadvertising/hermes-agent.git
-	branch = feat/dual-instance-honcho-sync
+	branch = main
